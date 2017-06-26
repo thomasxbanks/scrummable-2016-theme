@@ -9,7 +9,7 @@ $alt_text = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 <header class="post__header">
 	<section class="hero-image <?php echo $classes; ?>" data-role="hero-image" aria-label="Post Main Image">
 		<?php if (has_post_thumbnail()) : ?>
-			<img class="hero-thumb" src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php echo (count($alt_text)) ? $alt_text : get_the_title(); ?>">
+			<img class="hero-thumb" src="<?php the_post_thumbnail_url('thumbnail'); ?>" alt="<?php echo (count($alt_text)) ? $alt_text : get_the_title(); ?>">
 			<?php if (!is_mobile()) { ?>
 				<img class="hero-full" src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php echo (count($alt_text)) ? $alt_text : get_the_title(); ?>">
 			<?php } else { ?>
