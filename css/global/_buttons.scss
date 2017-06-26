@@ -1,0 +1,49 @@
+// Buttons
+button, .button, input[type="submit"] {
+	padding: $baseline;
+	margin: 0 ($baseline / 2);
+	line-height: 1;
+	border: none;
+	font-family: $font__face--accent;
+	font-size: $font__size--sml !important;
+	font-weight: bold;
+  color: $color__background--main !important;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	cursor: pointer;
+	-webkit-appearance: none;
+	-webkit-font-smoothing: antialiased;
+	background-color: rgba($color__brand--main, 1);
+	width: auto;
+	transition: $transition__easing--main $transition__speed--fast;
+	-webkit-transition: $transition__easing--main $transition__speed--fast;
+	@media screen and (max-width: 400px) {
+		width: 100%;
+	}
+	&:hover {
+		background-color: darken($color__brand--accent, 20%);
+	}
+	&.button--big {
+		display: block;
+		margin: $baseline auto 0 auto;
+		max-width: 320px;
+	}
+}
+
+button::-moz-focus-inner, select::-moz-focus-inner, input::-moz-focus-inner, textarea::-moz-focus-inner {
+	border: 0;
+}
+
+button:focus, select:focus, input:focus, textarea:focus {
+	outline: 0;
+}
+
+.skip-link {
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0;
+	width: 48px;
+	height: 48px;
+}

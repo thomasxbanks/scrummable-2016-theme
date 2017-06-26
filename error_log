@@ -1,0 +1,2 @@
+[19-Mar-2017 13:51:18 America/Denver] PHP Fatal error:  Call to undefined function get_bloginfo() in /home1/scrummab/public_html/wp-content/themes/scrummable-2016-theme/404.php on line 8
+[24-Mar-2017 00:53:43 America/Denver] PHP Fatal error:  Call to undefined function get_bloginfo() in /home1/scrummab/public_html/wp-content/themes/scrummable-2016-theme/404.php on line 8

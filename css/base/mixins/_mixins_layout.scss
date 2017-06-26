@@ -1,0 +1,93 @@
+// Clearfix
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/* USAGE:
+  .element_with_floated_children {
+    @include clearfix();
+  }
+*/
+// end Clearfix
+// Adaptive breakpoints
+@mixin breakpoint($point) {
+  @if $point == large {
+    @media (min-width: 64.375em) { @content; }
+  }
+  @else if $point == medium {
+    @media (min-width: 50em) { @content; }
+  }
+  @else if $point == small {
+    @media (min-width: 37.5em)  { @content; }
+  }
+}
+
+/* USAGE:
+  .class {
+    width: 2px;
+    @include breakpoint(large){
+      width: 2000px;
+    }
+    @include breakpoint(medium){
+      width: 200px;
+    }
+    @include breakpoint(small){
+      width: 20px;
+    }
+   }
+*/
+
+// end Adaptive breakpoints
+
+// Box Sizing
+@mixin box-sizing( $type ) {
+  -webkit-box-sizing: $type;
+  -moz-box-sizing: $type;
+  -o-box-sizing: $type;
+  -ms-box-sizing: $type;
+  box-sizing: $type;
+}
+
+/* USAGE:
+  .class {
+    @include box-sizing('border-box');
+    padding: 20px;
+   }
+*/
+// end Box Sizing
+
+// Equal percentage width children based on count
+@mixin adjust-form-siblings-count($max: 10, $property: width) {
+  $i: 0;
+  @while ($i < $max) {
+    $i: $i+1;
+    $j: 1;
+    $selector: "";
+    @while ($j < $i) {
+      $selector: $selector + "&:nth-child(#{$j}):nth-last-child(#{$i - $j + 1}),";
+      $j: $j+1;
+      @debug "$j #{$j}";
+    }
+    $selector: $selector + "&:nth-child(#{$j}):nth-last-child(#{$i - $j + 1})";
+
+    @debug "$i #{$i}";
+    @debug "#$selector #{$selector}";
+    #{$selector} { #{$property}: percentage(1/$i); }
+  }
+}
+
+/* USAGE:
+  .parent {
+    .child {
+      @include adjust-form-siblings-count;
+    }
+  }
+*/
+// end Equal percentage width children based on count

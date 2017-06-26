@@ -1,0 +1,35 @@
+.flag {
+	position: absolute;
+	top: 0;
+	left: (($baseline / 2) - $baseline);
+	z-index: 120;
+	background-color: $color__brand--accent;
+	color: $color__background--main;
+	font-family: $font__face--accent;
+	font-weight: 600;
+	padding: ($baseline / 2);
+	margin: ($baseline / 2) 0;
+	text-transform: uppercase;
+	font-size: $font__size--sml;
+	&:before {
+		display: block;
+		content: "";
+		position: absolute;
+		bottom: (($baseline / 2) - $baseline);
+		left: 0;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 ($baseline / 2) ($baseline / 2) 0;
+		border-color: transparent darken($color__brand--accent, 10%) transparent transparent;
+	}
+	@media screen and (max-width: 567px) {
+		display: block;
+		position: static;
+		width: 100%;
+		margin: 0;
+		&:before {
+			display: none;
+		}
+	}
+}

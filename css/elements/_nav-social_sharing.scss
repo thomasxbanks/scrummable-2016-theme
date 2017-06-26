@@ -1,0 +1,26 @@
+#nav-social_sharing {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  z-index: 5000;
+  background: rgba($color__brand--main, $opacity--solid);
+  font-size: 0;
+  padding: ($baseline / 2) $baseline;
+  transition: bottom $transition__easing--main $transition__speed--fast;
+  text-align: center;
+  &.open {
+	bottom: 0;
+  }
+  li {
+	display: inline-block;
+    a {
+      color: $color__background--main;
+      font-size: $font__size--med;
+	  padding: $baseline;
+	  &:hover {
+		font-weight: bold;
+	  }
+    }
+  }
+}

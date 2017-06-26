@@ -1,0 +1,32 @@
+// Social Media Colors
+// https://www.competethemes.com/blog/social-media-colors/
+$social_colors:
+twitter #00aced,
+facebook #3b5998, 
+googleplus #dd4b39, 
+pinterest #cb2027, 
+linkedin #007bb6, 
+youtube #bb0000, 
+vimeo #aad450, 
+tumblr #32506d, 
+instagram #517fa4, 
+flickr #ff0084, 
+dribbble #ea4c89, 
+quora #a82400,
+reddit #ff4500,
+foursquare #0072b1, 
+forrst #5B9A68, 
+vk #45668e, 
+wordpress #21759b, 
+stumbleupon #EB4823, 
+yahoo #7B0099, 
+blogger #fb8f3d, 
+soundcloud #ff3a00;
+
+@each $social_color in $social_colors {
+  #social_media_#{nth($social_color, 1)}:hover {
+    i {
+      color: nth($social_color, 2) !important;
+    }
+  }
+}

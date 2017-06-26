@@ -1,0 +1,91 @@
+// Do not resize text
+@mixin textSize($value) {
+  -webkit-text-size-adjust: $value;
+  -moz-text-size-adjust: $value;
+  -ms-text-size-adjust: $value;
+  -o-text-size-adjust: $value;
+  text-size-adjust: $value;
+}
+
+// end Do not resize text
+
+// Calculate color contrast
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return $font__color--main; // Lighter background, return dark color
+  } @else {
+    @return $color__background--main; // Darker background, return light color
+  }
+}
+
+/* USAGE:
+  .class {
+    background-color: $background_color;
+    color: set-text-color($background_color);
+  }
+*/
+// end Calculate color contrast
+
+// Border Radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+// end Border Radius
+
+// Box Shadow
+@mixin box-shadow($hoff, $voff, $blur, $color, $opacity){
+  -webkit-box-shadow: $hoff $voff $blur rgba($color, $opacity);
+  -moz-box-shadow: $hoff $voff $blur rgba($color, $opacity);
+  -o-box-shadow: $hoff $voff $blur rgba($color, $opacity);
+  -ms-box-shadow: $hoff $voff $blur rgba($color, $opacity);
+  box-shadow: $hoff $voff $blur rgba($color, $opacity);
+}
+
+/* USAGE:
+  .class {
+    @include box-shadow(2px, 2px, 10px, #000000, 0.5);
+  }
+*/
+// end Box Shadow
+
+// Linear Gradient (Two Color)
+@mixin linear-gradient($colorFrom, $colorTo) {
+  background: linear-gradient($colorFrom, $colorTo);
+  background: -webkit-linear-gradient($colorFrom, $colorTo);
+  background: -o-linear-gradient($colorFrom, $colorTo);
+  background: -ms-linear-gradient($colorFrom, $colorTo);
+}
+// end Linear Gradient (Two Color)
+
+// Dyslexia theme
+@mixin content($color__background, $color__font) {
+  * {
+	background: $color__background !important;
+	color: $color__font !important;
+  }
+}
+
+$color_bg_default: #ffffff;
+$color_font_default: #000000;
+$color_bg_dyslexia: #ffffcc;
+$color_font_dyslexia: #656565;
+
+
+body.theme--default {
+  @include content($color_bg_default, $color_font_default);
+}
+
+body.theme--dyslexia {
+  @include content($color_bg_dyslexia, $color_font_dyslexia);
+}
+
+// Linear interpolation.
+// https://css-tricks.com/between-the-lines/
+@function between($to, $from, $toWidth, $fromWidth) {
+  $slope: ($to - $from) / ($toWidth - $fromWidth);
+  $base: $from - $slope * $fromWidth;
+
+  @return calc(#{$base} + #{100vw * $slope});
+}

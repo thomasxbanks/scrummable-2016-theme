@@ -1,0 +1,70 @@
+#comments {
+	// wrapper styles
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: $baseline;
+	text-align: left;
+	#comments-list {
+		// inner wrapper
+		width: 100% !important;
+		opacity: 1 !important;
+		h3.comments-title {
+			// comment count
+		}
+		ul {
+			// styles for the actual list
+			list-style-type: none;
+			padding-left: 0;
+			display: block;
+			width: 100%;
+			opacity: 1 !important;
+			padding: ($baseline / 5);
+			li {
+				display: block;
+				background: rgba($color__brand--accent, ($opacity--standard / 4));
+				padding: $baseline;
+				margin: 0 0 $baseline 0;
+				.comment-body {
+					.comment-author {
+						font-size: $font__size--sml;
+						cite {
+							font-weight: bold;
+						}
+						.says {
+							font-size: $font__size--xsm;
+						}
+						img {
+							@include border-radius(50%);
+							vertical-align: middle;
+						}
+					}
+					.comment-meta {
+						font-size: $font__size--sml;
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+	}
+	#respond {
+		#commentform {
+			p {
+				display: block;
+				width: 100%;
+				padding: 0;
+				margin: 10px 0;
+				label {
+					display: inline-block;
+					width: 50%;
+					padding: 10px;
+				}
+				input:not([type="submit"]), textarea {
+					display: inline-block;
+					width: 100%;
+					padding: $baseline;
+				}
+			}
+		}
+	}
+}

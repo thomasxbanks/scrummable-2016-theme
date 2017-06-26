@@ -1,0 +1,153 @@
+a, a:link, a:active {
+  font-family: inherit;
+  font-size: inherit;
+  color: #121214;
+  cursor: pointer !important;
+  text-decoration: none;
+  border-bottom: 1px solid #445566; }
+  a:hover, a:link:hover, a:active:hover {
+    color: #42424a; }
+  a:visited, a:link:visited, a:active:visited {
+    color: #1e1e21; }
+
+body {
+  font-family: "Work Sans", "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #222221;
+  letter-spacing: normal;
+  font-style: normal;
+  text-decoration: none;
+  font-weight: 400;
+  text-align: left;
+  -webkit-font-smoothing: antialiased; }
+  body strong, body b {
+    font-family: inherit;
+    font-weight: 600; }
+  body em, body i {
+    font-family: inherit;
+    font-style: italic; }
+  body h1, body h2, body h3, body h4, body h5, body h6 {
+    display: block;
+    padding: 0;
+    margin: 0;
+    font-family: "Raleway", Times, Baskerville, Georgia, serif; }
+  body h1 {
+    font-size: 3rem;
+    font-weight: 600; }
+  body h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #121214; }
+  body h3 {
+    font-size: 1.5rem;
+    color: #121214; }
+  body h4, body h5, body h6 {
+    font-size: 1rem; }
+  body p {
+    display: block;
+    margin: 16px 0;
+    line-height: 1.75;
+    font-size: 1rem; }
+  body hr {
+    color: #121214;
+    height: 1px;
+    opacity: 0.2;
+    margin: 8px 0 7px 0; }
+  body pre, body .pre {
+    display: block;
+    background-color: whitesmoke;
+    border: 1px solid #ededed;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+    padding: 16px;
+    margin: 16px 0; }
+
+html .mceContentBody, .mce-content-body {
+  background: #f2eee6;
+  max-width: 640px;
+  padding: 16px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 110;
+  font-size: 1rem;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 16px;
+  line-height: 1.75; }
+  html .mceContentBody ul, html .mceContentBody ol, .mce-content-body ul, .mce-content-body ol {
+    padding: 16px 32px; }
+    html .mceContentBody ul li, html .mceContentBody ol li, .mce-content-body ul li, .mce-content-body ol li {
+      line-height: 1.5;
+      padding-bottom: 8px; }
+      html .mceContentBody ul li:last-child, html .mceContentBody ol li:last-child, .mce-content-body ul li:last-child, .mce-content-body ol li:last-child {
+        padding-bottom: 0; }
+  html .mceContentBody .intro, html .mceContentBody p:first-child, .mce-content-body .intro, .mce-content-body p:first-child {
+    font-family: "Raleway", Times, Baskerville, Georgia, serif !important;
+    font-size: 1.5rem;
+    font-weight: 200;
+    line-height: 1.5; }
+    html .mceContentBody .intro p, html .mceContentBody p:first-child p, .mce-content-body .intro p, .mce-content-body p:first-child p {
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit; }
+  html .mceContentBody h1, html .mceContentBody h2, html .mceContentBody h3, html .mceContentBody h4, html .mceContentBody h5, html .mceContentBody h6, .mce-content-body h1, .mce-content-body h2, .mce-content-body h3, .mce-content-body h4, .mce-content-body h5, .mce-content-body h6 {
+    line-height: 125%;
+    margin-bottom: 16px; }
+  html .mceContentBody .alignleft, html .mceContentBody .alignright, html .mceContentBody .aligncenter, html .mceContentBody .alignnone, .mce-content-body .alignleft, .mce-content-body .alignright, .mce-content-body .aligncenter, .mce-content-body .alignnone {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    vertical-align: text-top; }
+  html .mceContentBody .alignleft, .mce-content-body .alignleft {
+    float: left;
+    margin-left: 0;
+    margin-right: 16px; }
+  html .mceContentBody .alignright, .mce-content-body .alignright {
+    float: right;
+    margin-left: 16px;
+    margin-right: 0; }
+  html .mceContentBody .aligncenter, html .mceContentBody .alignnone, .mce-content-body .aligncenter, .mce-content-body .alignnone {
+    float: none;
+    margin-left: auto;
+    margin-right: auto; }
+  html .mceContentBody img, html .mceContentBody figure, html .mceContentBody .wp-caption, html .mceContentBody .wp-caption .wp-caption-dt, .mce-content-body img, .mce-content-body figure, .mce-content-body .wp-caption, .mce-content-body .wp-caption .wp-caption-dt {
+    display: block;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto; }
+  html .mceContentBody figcaption, html .mceContentBody .wp-caption-text, html .mceContentBody .wp-caption-dd, .mce-content-body figcaption, .mce-content-body .wp-caption-text, .mce-content-body .wp-caption-dd {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    font-size: 0.75rem;
+    text-align: center;
+    background-color: rgba(233, 227, 213, 0.75); }
+  html .mceContentBody blockquote, .mce-content-body blockquote {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    padding: 8px 16px;
+    border-left: 4px solid #121214;
+    font-weight: normal;
+    font-style: italic;
+    color: #3c3c3a;
+    font-size: 1.5rem;
+    font-family: "Raleway", Times, Baskerville, Georgia, serif; }
+    html .mceContentBody blockquote p, .mce-content-body blockquote p {
+      font-size: inherit;
+      margin: 0; }
+    html .mceContentBody blockquote a, .mce-content-body blockquote a {
+      text-decoration: none; }
+    html .mceContentBody blockquote a span, html .mceContentBody blockquote span, html .mceContentBody blockquote span a, html .mceContentBody blockquote cite, html .mceContentBody blockquote cite a, html .mceContentBody blockquote a cite, .mce-content-body blockquote a span, .mce-content-body blockquote span, .mce-content-body blockquote span a, .mce-content-body blockquote cite, .mce-content-body blockquote cite a, .mce-content-body blockquote a cite {
+      display: block;
+      text-align: right; }
+      html .mceContentBody blockquote a span:before, html .mceContentBody blockquote span:before, html .mceContentBody blockquote span a:before, html .mceContentBody blockquote cite:before, html .mceContentBody blockquote cite a:before, html .mceContentBody blockquote a cite:before, .mce-content-body blockquote a span:before, .mce-content-body blockquote span:before, .mce-content-body blockquote span a:before, .mce-content-body blockquote cite:before, .mce-content-body blockquote cite a:before, .mce-content-body blockquote a cite:before {
+        content: "~ "; }
+    html .mceContentBody blockquote:before, html .mceContentBody blockquote:after, .mce-content-body blockquote:before, .mce-content-body blockquote:after {
+      content: "";
+      display: table;
+      clear: both;
+      float: none; }
+
+/*# sourceMappingURL=editor-style.css.map */

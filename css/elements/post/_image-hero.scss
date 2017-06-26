@@ -1,0 +1,149 @@
+.post__wrapper--link {
+	text-decoration: none;
+}
+
+header.post__header {
+	overflow: hidden;
+}
+
+.post__wrapper--image {
+	display: table;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 100%;
+
+	.hero__title--wrapper {
+		position: relative;
+		z-index: 100;
+		display: table-cell;
+		vertical-align: bottom;
+		text-align: left;
+		width: 100%;
+		height: 100%;
+		padding: 0;
+		@include linear-gradient(rgba($color__shadow, $opacity--transparent), rgba($color__shadow, $opacity--standard));
+	}
+
+	h1 {
+		max-width: 640px;
+		margin: 0 auto;
+		padding: 1rem;
+		text-align: left;
+		color: $color__background--main;
+		text-shadow: 0 0 $baseline rgba($color__shadow, $opacity--solid);
+		text-decoration: none;
+	}
+
+	p {
+		display: block;
+		max-width: 400px;
+		margin: $baseline auto;
+		color: $color__background--main;
+		text-shadow: 0 0 ($baseline / 2) rgba($color__shadow, $opacity--solid);
+		text-decoration: none;
+	}
+	@media screen and (max-width: 567px) {
+		h1 {
+			font-size: $font__size--lrg;
+		}
+	}
+	@media screen and (min-width: 568px) and (max-width: 799px) {
+		h1 {
+			font-size: 6vw;
+		}
+	}
+}
+
+.post--teaser {
+	.post__wrapper--image {
+		.hero__title--wrapper {
+			.hero__title.hero__title--post {
+				max-width: 100%;
+			}
+		}
+	}
+
+	.hero-image {
+		height: 400px;
+	}
+}
+
+.hero-image {
+	display: table;
+	width: 100%;
+	height: 400px;
+	height: 80vh;
+	overflow: hidden;
+	position: relative;
+}
+
+.hero-full,
+.hero-thumb {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	-o-object-fit: cover;
+	object-position: top center;
+	-o-object-position: top center;
+	transition: opacity 1s;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.hero-thumb {
+	z-index: 1;
+}
+
+.hero-full {
+	z-index: 0;
+}
+
+.hero-full.hide,
+.hero-thumb.hide {
+	opacity: 0;
+}
+
+.hero__image--page {
+	.hero__title--wrapper {
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	h1 {
+		text-align: center;
+
+		&:before {
+			content: "";
+			display: block;
+			width: 72px;
+			height: 100px;
+			vertical-align: middle;
+			background-image: url('img/cupcake--white.png');
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			margin: $baseline auto;
+		}
+
+		&:hover {
+			&:before {
+				@include animation(pulse 0.25s 1);
+			}
+		}
+	}
+
+	p {
+		a {
+			color: $color__background--main;
+			border: none;
+			font-size: $font__size--lrg;
+
+			&:hover {
+				color: $color__background--main;
+			}
+		}
+	}
+}

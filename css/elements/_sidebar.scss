@@ -1,0 +1,38 @@
+aside.sidebar {
+	position: absolute;
+	top: ($baseline * 3.5);
+	right: 0;
+	width: 300px;
+	height: 100vh;
+	padding: $baseline ($baseline / 2);
+	transform: translate3d(300px, 0, 0);
+	-webkit-transform: translate3d(300px, 0, 0);
+	transition: $transition__easing--main $transition__speed--fast;
+	background: rgba($color__brand--main, $opacity--solid);
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	color: $color__background--main;
+	box-shadow: inset 4px 0 $color__brand--accent;
+	&.open {
+		transform: translate3d(0, 0, 0);
+		-webkit-transform: translate3d(0, 0, 0);
+	}
+}
+
+form {
+	&.searchform {
+		padding: $baseline;
+		input {
+			background-color: rgba($color__background--main, 1);
+			color: $font__color--main;
+			width: 100%;
+			&[type="text"] {
+				font-size: $font__size--std;
+				line-height: 1;
+				height: $font__size--std;
+				margin: ($baseline / 2) 0;
+				padding: $baseline;
+			}
+		}
+	}
+}

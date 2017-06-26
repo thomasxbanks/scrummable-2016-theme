@@ -1,0 +1,98 @@
+html {
+  font-size: 18px;
+    @media (min-width: 768px) {
+        font-size: between(20px, 18px, 768px, 1366px);
+    }
+    @media (min-width: 1366px) {
+        font-size: 18px;
+    }
+	-webkit-overflow-scrolling: touch;
+	body {
+		// Structure
+		position: relative;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 0;
+		margin: 0;
+		overflow-x: hidden;
+		@include box-sizing(border-box);
+		opacity: 0;
+		* {
+			@include box-sizing(border-box);
+			@include textSize(none);
+			padding: 0;
+			margin: 0;
+		}
+		// Background
+		background-color: $color__background--accent;
+
+		// Text
+		::-moz-selection {
+			color: $color__background--main;
+			background: rgba($color__brand--main, $opacity--solid);
+		}
+		::selection {
+			color: $color__background--main;
+			background: rgba($color__brand--main, $opacity--solid);
+		}
+
+		// Define the centralised maximum width for the main body content
+		.container {
+			padding: 0;
+			font-size: 0;
+			text-align: center;
+		}
+
+		#main {
+			transform: translate(0, 0);
+			-webkit-transform: translate(0, 0);
+			transition: $transition__easing--main $transition__speed--fast;
+			&.open {
+				transform: translate(-300px, 0);
+				-webkit-transform: translate(-300px, 0);
+			}
+		}
+		.masonry {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 2000px;
+			@media screen and (max-width: 799px) {
+				max-width: 100%;
+			}
+			@media screen and (min-width: 800px) and (max-width: 1199px) {
+				max-width: 800px;
+			}
+			@media screen and (min-width: 1200px) and (max-width: 1599px) {
+				max-width: 1200px;
+			}
+			@media screen and (min-width: 1600px) and (max-width: 2000px) {
+				max-width: 1600px;
+			}
+		}
+	}
+
+	// Scrollbars - Chrome/WebKit only. Will appear as normal in other browsers.
+	::-webkit-scrollbar {
+		width: ($baseline / 2);
+		background: rgba($color__brand--main, $opacity--solid);
+	}
+
+	::-webkit-scrollbar-track {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: calc(100% - 10px);
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: rgba($color__brand--main, $opacity--solid);
+		border: 1px solid rgba($color__background--main, $opacity--standard);
+		@include border-radius(10px);
+		&:hover {
+			background: rgba($color__brand--accent, $opacity--solid);
+		}
+	}
+}

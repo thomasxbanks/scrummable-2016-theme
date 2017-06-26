@@ -1,0 +1,81 @@
+.post__data--meta {
+	font-size: $font__size--xsm;
+	padding: $baseline 0 ($baseline - 1) 0;
+	border-bottom: 1px solid rgba($font__color--main, $opacity--standard);
+	margin-bottom: $baseline;
+
+	ul {
+		li {
+			font-size: $font__size--sml;
+			line-height: ($baseline * 1.5);
+			&:before {
+				font-family: FontAwesome;
+				content: "";
+				padding-right: 0.5em;
+				display: inline-block;
+			}
+			&.author {
+				&:before {
+					content: "\f007";
+				}
+			}
+			&.date {
+				&:before {
+					content: "\f073";
+				}
+			}
+			&.read_time {
+				&:before {
+					content: "\f017";
+				}
+			}
+			&.comments {
+				&:before {
+					content: "\f086";
+				}
+			}
+			&.read_comments {
+				&:before {
+					content: "\f02d";
+				}
+			}
+			&.write_comments {
+				&:before {
+					content: "\f040";
+				}
+			}
+			&.edit {
+				&:before {
+					content: "\f040";
+				}
+			}
+			&.twitter {
+				&:before {
+					content: "\f099";
+				}
+			}
+			&.instagram {
+				&:before {
+					content: "\f16d";
+				}
+			}
+			&:hover {
+				&:before {
+					@include animation(pulse 0.25s 1);
+				}
+			}
+		}
+	}
+	cite {
+		font-style: normal;
+	}
+	.author__avatar {
+		@include border-radius(50%);
+		display: inline-block;
+		&.author__avatar--small {
+			width: $font__size--sml;
+			height: $font__size--sml;
+		}
+	}
+}
+

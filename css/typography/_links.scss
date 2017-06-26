@@ -1,0 +1,15 @@
+// Text Links
+a, a:link, a:active {
+  font-family: inherit;
+  font-size: inherit;
+  color: $color__brand--main;
+  cursor: pointer !important;
+	text-decoration: none;
+	border-bottom: 1px solid $color__brand--accent;
+  &:hover {
+	color: lighten($color__brand--main, $color__change--main);
+  }
+  &:visited {
+	color: lighten($color__brand--main, $color__change--slight);
+  }
+}

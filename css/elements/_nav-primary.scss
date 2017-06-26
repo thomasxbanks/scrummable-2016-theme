@@ -1,0 +1,53 @@
+// Global Navigation
+ul#nav-icon__wrapper {
+	float: right;
+	position: relative;
+	z-index: 120;
+	padding-top: 2px;
+	li {
+    margin-right: 0;
+		button {
+			background: none;
+			border: none !important;
+			color: $color__background--accent;
+			font-size: $font__size--std !important;
+			padding: $baseline;
+			line-height: $font__size--med;
+      margin-top: 4px;
+			&:hover {
+				background: none;
+				color: lighten($color__background--accent, 100%);
+			}
+		}
+	}
+}
+
+// Sidebar navigation lists
+aside.sidebar {
+	ul.list--blocks {
+		padding: 0;
+		li {
+			display: block;
+			padding: 0;
+			margin: 0;
+			box-shadow: inset 0 -2px $color__background--main;
+			&:last-child {
+				box-shadow: inset 0 0 $color__background--main;
+			}
+			a {
+				display: block;
+				width: 100%;
+				text-align: left;
+				color: $color__background--main;
+				text-decoration: none;
+				padding: $baseline;
+				//@include linear-gradient($color__brand--main, $color__brand--main);
+				transition: background-image $transition__easing--main $transition__speed--fast, box-shadow $transition__easing--main $transition__speed--fast;
+				&:hover {
+					//@include linear-gradient($color__brand--main, lighten($color__brand--main, 10%));
+					box-shadow: inset 0 -4px $color__background--main;
+				}
+			}
+		}
+	}
+}
