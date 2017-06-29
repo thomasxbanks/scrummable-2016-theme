@@ -1,7 +1,7 @@
 $grid_size: 12;
-$max-grid: 1440;
+$max-grid: 1200;
 $grid-gutter: 20;
-$min-item: 300;
+$min-item: 400;
 $break: 2;
 
 .grid_container {
@@ -10,7 +10,7 @@ $break: 2;
   padding-left: #{($grid-gutter / 2)}px;
 }
 
-[class^="item-"] {
+[class*="item-"] {
   display: inline-block;
   vertical-align: top;
 	width: calc(100% - #{$grid-gutter}px);

@@ -30,6 +30,7 @@ header.post__header {
 		margin: 0 auto;
 		padding: 1rem;
 		text-align: left;
+    font-family: $font_face-accent;
 		color: $clr_bg-main;
 		text-shadow: 0 0 $baseline rgba($clr_shadow, $opacity-solid);
 		text-decoration: none;
@@ -55,7 +56,7 @@ header.post__header {
 	}
 }
 
-.post--teaser {
+.post-teaser {
 	.post__wrapper--image {
 		.hero__title--wrapper {
 			.hero__title.hero__title--post {

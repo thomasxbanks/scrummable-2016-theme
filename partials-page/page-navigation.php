@@ -4,11 +4,11 @@
             <i class="fa fa-arrow-down"></i>
         </button>
     </li>
-    <li id="nav-icon--search" class="nav-icon">
+    <!-- <li id="nav-icon--search" class="nav-icon">
         <button class="" type="button" data-sidebar="search" data-role="button" aria-label="Toggle Search Bar">
             <i class="fa fa-search"></i>
         </button>
-    </li>
+    </li> -->
 <!--    <li id="nav-icon--settings" class="nav-icon">-->
 <!--        <button class="" type="button" data-sidebar="settings" role="button" aria-label="Toggle Settings Menu">-->
 <!--            <i class="fa fa-cog"></i>-->

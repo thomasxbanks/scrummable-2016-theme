@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 <?php (!is_single()) ? get_template_part('partials-page/page', 'hero') : null; ?>
-    <section id="main" class="container<?php echo ((!is_mobile() && (is_front_page() || (is_archive())))) ? ' masonry' : null; ?>" data-role="main" aria-label="Main page content">
+      <main class="grid_container grid_row grid_wrap content-center central-column">
+
         <?php /* begin the loop */
         if (have_posts()) :
             $count = 0; ?>
@@ -16,6 +17,6 @@
         <?php else : /* show page not found message */ ?>
             <?php get_template_part('pages/page', 'fourohfour'); ?>
         <?php endif; /* end if have_posts */ ?>
-    </section>
+    </main>
 <?php get_template_part('partials-page/page', 'onward-journeys'); ?>
 <?php get_footer(); ?>

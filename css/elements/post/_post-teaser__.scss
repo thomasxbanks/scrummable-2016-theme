@@ -1,0 +1,42 @@
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0;
+	position: relative;
+	z-index: 110;
+	.post--teaser {
+		display: inline-block;
+		margin: 0 auto;
+		padding: 0;
+		width: 400px;
+		font-size: 1rem;
+		vertical-align: top;
+		.inner {
+			position: relative;
+			transition: $ease-main $speed-fast;
+			box-shadow: inset 1px 1px 0 rgba($clr_grey-mid, $opacity-least), inset -1px -1px 0 rgba($clr_grey-mid, $opacity-least);
+			margin: ($baseline / 2);
+			background-color: $clr_bg-main;
+
+			.post__content {
+				padding: 1rem;
+				text-align: left;
+				p {
+					color: $font_clr-main;
+					font-size: $font_size-std;
+				}
+			}
+			footer.post__footer {
+				padding: 0 $baseline $baseline $baseline;
+				text-align: left;
+				line-height: $lh;
+				ul li {
+					font-size: $font_size-sml;
+				}
+			}
+		}
+		@media screen and (max-width: 799px) {
+			width: 100%;
+		}
+	}
+}
