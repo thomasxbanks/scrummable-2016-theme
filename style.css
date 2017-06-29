@@ -930,6 +930,20 @@ ul.list--flags {
   .post a:link:hover {
     box-shadow: inset 0 -4px 0 #a1213d; }
 
+.post__content--inner ul {
+  padding-left: 1rem;
+  list-style-type: none; }
+  .post__content--inner ul li {
+    text-indent: -1.25rem; }
+    .post__content--inner ul li:before {
+      content: "";
+      background-color: #a1213d;
+      transform: translateY(-250%);
+      margin-right: 0.75rem;
+      display: inline-block;
+      width: 10px;
+      height: 2px; }
+
 form {
   width: 100%;
   display: block; }

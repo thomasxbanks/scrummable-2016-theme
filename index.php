@@ -19,4 +19,3 @@
     </section>
 <?php get_template_part('partials-page/page', 'onward-journeys'); ?>
 <?php get_footer(); ?>
-
