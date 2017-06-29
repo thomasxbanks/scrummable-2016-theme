@@ -6,8 +6,8 @@
 
 	ul {
 		li {
-			font-size: $font_size-sml;
-			line-height: ($baseline * 1.5);
+			font-size: $font_size-xsm;
+			line-height: $lh;
 			&:before {
 				font-family: FontAwesome;
 				content: "";

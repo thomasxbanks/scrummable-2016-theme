@@ -26,8 +26,8 @@ $font_face-accent: "Comfortaa", "Times New Roman", Times, Baskerville, Georgia, 
 
 $font_clr-main: $clr_grey-dark;
 
-$font_size-xsm: ($baseline * 0.6);
-$font_size-sml: ($baseline * 0.8);
+$font_size-xsm: ($baseline * 0.75);
+$font_size-sml: ($baseline * 0.85);
 $font_size-std: $baseline;
 $font_size-med: ($baseline * 1.33);
 $font_size-lrg: ($baseline * 1.66);
@@ -39,6 +39,8 @@ $lh: $line-height;
 // Opacity
 $opacity-transparent: 0;
 $opacity-standard: 0.66;
+$opacity-less: 0.33;
+$opacity-least: 0.16;
 $opacity-solid: 1;
 
 // CSS3 Transitions

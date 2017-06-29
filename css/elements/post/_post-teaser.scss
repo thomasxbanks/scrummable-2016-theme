@@ -11,18 +11,10 @@
 		width: 400px;
 		font-size: 1rem;
 		vertical-align: top;
-
-		// &:first-child {
-		// 	width: 800px;
-		// 	@media screen and (max-width: 799px) {
-		// 		width: 100%;
-		// 	}
-		//
-		// }
 		.inner {
 			position: relative;
 			transition: $ease-main $speed-fast;
-			box-shadow: inset 1px 1px 0 rgba($clr_grey-mid, $opacity-standard), inset -1px -1px 0 rgba($clr_grey-mid, $opacity-standard);
+			box-shadow: inset 1px 1px 0 rgba($clr_grey-mid, $opacity-least), inset -1px -1px 0 rgba($clr_grey-mid, $opacity-least);
 			margin: ($baseline / 2);
 			background-color: $clr_bg-main;
 
@@ -35,7 +27,7 @@
 				}
 			}
 			footer.post__footer {
-				padding: $baseline;
+				padding: 0 $baseline $baseline $baseline;
 				text-align: left;
 				line-height: $lh;
 				ul li {

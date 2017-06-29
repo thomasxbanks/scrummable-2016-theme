@@ -1,12 +1,12 @@
 .read-more {
-	display: block;
+	display: inline-block;
 	text-decoration: none;
 	color: inherit;
 	font-family: $font_face-accent;
 	font-size: $font_size-sml;
 	font-weight: bold;
 	text-transform: uppercase;
-	margin-top: 1rem;
+	margin: 1rem 0;
 	box-shadow: none !important;
 	position: relative;
 

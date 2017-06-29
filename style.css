@@ -704,20 +704,16 @@ html {
         -webkit-transform: translate(-300px, 0); }
     html body .masonry {
       margin-left: auto;
-      margin-right: auto;
-      max-width: 2000px; }
+      margin-right: auto; }
       @media screen and (max-width: 799px) {
         html body .masonry {
           max-width: 100%; } }
       @media screen and (min-width: 800px) and (max-width: 1199px) {
         html body .masonry {
           max-width: 800px; } }
-      @media screen and (min-width: 1200px) and (max-width: 1599px) {
+      @media screen and (min-width: 1200px) {
         html body .masonry {
           max-width: 1200px; } }
-      @media screen and (min-width: 1600px) and (max-width: 2000px) {
-        html body .masonry {
-          max-width: 1600px; } }
   html ::-webkit-scrollbar {
     width: 9px;
     background: #010101; }
@@ -743,7 +739,7 @@ button, .button, input[type="submit"] {
   line-height: 1;
   border: none;
   font-family: "Comfortaa", "Times New Roman", Times, Baskerville, Georgia, serif;
-  font-size: 14.4px !important;
+  font-size: 15.3px !important;
   font-weight: bold;
   color: #fffffe !important;
   text-decoration: none;
@@ -781,14 +777,14 @@ button:focus, select:focus, input:focus, textarea:focus {
   height: 48px; }
 
 .read-more {
-  display: block;
+  display: inline-block;
   text-decoration: none;
   color: inherit;
   font-family: "Comfortaa", "Times New Roman", Times, Baskerville, Georgia, serif;
-  font-size: 14.4px;
+  font-size: 15.3px;
   font-weight: bold;
   text-transform: uppercase;
-  margin-top: 1rem;
+  margin: 1rem 0;
   box-shadow: none !important;
   position: relative; }
   .read-more .arrow {
@@ -911,7 +907,7 @@ ul.list--flags {
       margin: 0 9px 9px 0;
       background-color: #010101;
       color: #fffffe;
-      font-size: 14.4px;
+      font-size: 15.3px;
       text-decoration: none;
       line-height: 1; }
       ul.list--flags li a:hover {
@@ -960,14 +956,14 @@ form {
   top: 0;
   left: -9px;
   z-index: 120;
-  background-color: #465255;
+  background-color: #a1213d;
   color: #fffffe;
   font-family: "Comfortaa", "Times New Roman", Times, Baskerville, Georgia, serif;
   font-weight: 600;
   padding: 9px;
   margin: 9px 0;
   text-transform: uppercase;
-  font-size: 14.4px; }
+  font-size: 15.3px; }
   .flag:before {
     display: block;
     content: "";
@@ -1296,13 +1292,13 @@ section.navigation {
         font-weight: bold; }
 
 .post__data--meta {
-  font-size: 10.8px;
+  font-size: 13.5px;
   color: #465255;
   padding: 18px 0 17px 0;
   margin-bottom: 18px; }
   .post__data--meta ul li {
-    font-size: 14.4px;
-    line-height: 27px; }
+    font-size: 13.5px;
+    line-height: 1.66; }
     .post__data--meta ul li:before {
       font-family: FontAwesome;
       content: "";
@@ -1341,8 +1337,8 @@ section.navigation {
     /* stops bg color from leaking outside the border: */
     display: inline-block; }
     .post__data--meta .author__avatar.author__avatar--small {
-      width: 14.4px;
-      height: 14.4px; }
+      width: 15.3px;
+      height: 15.3px; }
 
 #comments {
   width: 100%;
@@ -1366,11 +1362,11 @@ section.navigation {
         padding: 18px;
         margin: 0 0 18px 0; }
         #comments #comments-list ul li .comment-body .comment-author {
-          font-size: 14.4px; }
+          font-size: 15.3px; }
           #comments #comments-list ul li .comment-body .comment-author cite {
             font-weight: bold; }
           #comments #comments-list ul li .comment-body .comment-author .says {
-            font-size: 10.8px; }
+            font-size: 13.5px; }
           #comments #comments-list ul li .comment-body .comment-author img {
             -webkit-border-radius: 50%;
             border-radius: 50%;
@@ -1378,7 +1374,7 @@ section.navigation {
             /* stops bg color from leaking outside the border: */
             vertical-align: middle; }
         #comments #comments-list ul li .comment-body .comment-meta {
-          font-size: 14.4px;
+          font-size: 15.3px;
           margin-bottom: 10px; }
   #comments #respond #commentform p {
     display: block;
@@ -1410,7 +1406,7 @@ section.navigation {
     .container .post--teaser .inner {
       position: relative;
       transition: cubic-bezier(0.64, 0.22, 0.69, 0.98) 200ms;
-      box-shadow: inset 1px 1px 0 rgba(70, 82, 85, 0.66), inset -1px -1px 0 rgba(70, 82, 85, 0.66);
+      box-shadow: inset 1px 1px 0 rgba(70, 82, 85, 0.16), inset -1px -1px 0 rgba(70, 82, 85, 0.16);
       margin: 9px;
       background-color: #fffffe; }
       .container .post--teaser .inner .post__content {
@@ -1420,11 +1416,11 @@ section.navigation {
           color: #374043;
           font-size: 18px; }
       .container .post--teaser .inner footer.post__footer {
-        padding: 18px;
+        padding: 0 18px 18px 18px;
         text-align: left;
         line-height: 1.66; }
         .container .post--teaser .inner footer.post__footer ul li {
-          font-size: 14.4px; }
+          font-size: 15.3px; }
     @media screen and (max-width: 799px) {
       .container .post--teaser {
         width: 100%; } }
@@ -1488,7 +1484,7 @@ article.post--single {
       width: 100%;
       padding: 9px;
       margin: 0 auto;
-      font-size: 14.4px;
+      font-size: 15.3px;
       text-align: center;
       background-color: #dfe3e4;
       position: relative; }
@@ -1509,11 +1505,11 @@ article.post--single {
       width: 100%;
       margin: 9px 0;
       padding: 9px 18px;
-      border-left: 3px solid #010101;
+      border-left: 3px solid #a1213d;
       font-weight: normal;
       font-style: normal;
       color: #4e5b5f;
-      font-size: 23.94px;
+      font-size: 18px;
       font-family: "Comfortaa", "Times New Roman", Times, Baskerville, Georgia, serif; }
       article.post--single .post__content blockquote p {
         font-size: inherit;
@@ -1593,7 +1589,7 @@ article.page--single {
       display: block;
       width: 100%;
       padding: 9px;
-      font-size: 14.4px;
+      font-size: 15.3px;
       text-align: center;
       background-color: rgba(223, 227, 228, 0.66); }
     article.page--single .page__content blockquote {
