@@ -6,11 +6,11 @@ header#masthead {
 	left: 0;
 	right: 0;
 	z-index: 10000;
-	transition: $transition__easing--main $transition__speed--fast;
+	transition: $ease-main $speed-fast;
 	transform: translateY(0);
 	-webkit-transform: translateY(0);
 	&.open {
-		background-color: $color__brand--main;
+		background-color: $clr_black;
 		h1.company_logo {
 			opacity: 1;
 			transform: translateY(0);
@@ -38,11 +38,11 @@ header#masthead {
 		z-index: 130;
 	}
 	h1.company_logo {
-		font-family: $font__face--accent;
+		font-family: $font_face-accent;
 		opacity: 0;
 		transform: translateY(-100%);
 		-webkit-transform: translateY(-100%);
-		transition: $transition__easing--main $transition__speed--fast;
+		transition: $ease-main $speed-fast;
 		transform: scale(0.8);
 		-webkit-transform: scale(0.8);
 		a {
@@ -65,12 +65,12 @@ header#masthead {
 			}
 			display: block;
 			padding: $baseline 0 $baseline $baseline;
-			font-family: $font__face--accent;
-			font-size: $font__size--std;
+			font-family: $font_face-accent;
+			font-size: $font_size-std;
 			text-transform: lowercase;
 			text-decoration: none;
-			line-height: $font__size--med;
-			color: $color__background--main;
+			line-height: $font_size-med;
+			color: $clr_bg-main;
 			border: none;
 		}
 	}

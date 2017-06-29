@@ -1,7 +1,7 @@
 article.post--single {
 	width: 100%;
 	.post__content {
-    background: $color__background--main;
+    background: $clr_bg-main;
 		position: relative;
 		z-index: 110;
 		font-size: 1rem;
@@ -21,8 +21,8 @@ article.post--single {
 			}
 		}
 		.intro {
-			font-family: $font__face--accent !important;
-			font-size: $font__size--med;
+			font-family: $font_face-accent !important;
+			font-size: $font_size-med;
 			font-weight: 200;
 			line-height: 1.5;
 			p {
@@ -68,9 +68,9 @@ article.post--single {
 			width: 100%;
 			padding: ($baseline / 2);
 			margin: 0 auto;
-			font-size: $font__size--sml;
+			font-size: $font_size-sml;
 			text-align: center;
-			background-color: darken(rgba($color__background--accent, $opacity--solid), 5%);
+			background-color: darken(rgba($clr_bg-accent, $opacity-solid), 5%);
 			position: relative;
 			&:before {
 				@media screen and (min-width: 767px) {
@@ -79,7 +79,7 @@ article.post--single {
 					height: 0;
 					border-left: $baseline solid transparent;
 					border-right: $baseline solid transparent;
-					border-bottom: $baseline solid darken(rgba($color__background--accent, $opacity--solid), 5%);
+					border-bottom: $baseline solid darken(rgba($clr_bg-accent, $opacity-solid), 5%);
 					position: absolute;
 					top: -($baseline);
 					left: ($baseline * 2);
@@ -92,12 +92,12 @@ article.post--single {
 			width: 100%;
 			margin: ($baseline / 2) 0;
 			padding: ($baseline / 2) $baseline;
-			border-left: ($baseline / 6) solid $color__brand--main;
+			border-left: ($baseline / 6) solid $clr_black;
 			font-weight: normal;
 			font-style: normal;
-			color: lighten($font__color--main, 10%);
-			font-size: $font__size--med;
-			font-family: $font__face--accent;
+			color: lighten($font_clr-main, 10%);
+			font-size: $font_size-med;
+			font-family: $font_face-accent;
 			p {
 				font-size: inherit;
 				margin: 0;
@@ -120,4 +120,9 @@ article.post--single {
 			}
 		}
 	}
+  .post__footer {
+    display: block;
+    line-height: $lh;
+    margin: 2rem 1rem;
+  }
 }

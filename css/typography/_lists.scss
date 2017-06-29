@@ -5,7 +5,7 @@ ul.list--hz {
 	li {
 		display: inline-block;
 		margin-right: 0.5em;
-		font-size: $font__size--std;
+		font-size: $font_size-std;
 		&:last-child {
 			margin-right: 0;
 		}
@@ -24,7 +24,7 @@ ul.list--csv {
 	li {
 		display: inline-block;
 		margin-right: 0.5em;
-		font-size: $font__size--std;
+		font-size: $font_size-std;
 		&:after {
 			content: ",";
 		}
@@ -61,13 +61,13 @@ ul.list--flags {
 			display: block;
 			padding: ($baseline / 2);
 			margin: 0 ($baseline / 2) ($baseline / 2) 0;
-			background-color: $color__brand--main;
-			color: $color__background--main;
-			font-size: $font__size--sml;
+			background-color: $clr_black;
+			color: $clr_bg-main;
+			font-size: $font_size-sml;
 			text-decoration: none;
 			line-height: 1;
 			&:hover {
-				background-color: lighten($color__brand--main, 50%) !important;
+				background-color: lighten($clr_black, 50%) !important;
 			}
 			&:last-child {
 				a {

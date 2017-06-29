@@ -3,14 +3,14 @@
 	top: 0;
 	left: (($baseline / 2) - $baseline);
 	z-index: 120;
-	background-color: $color__brand--accent;
-	color: $color__background--main;
-	font-family: $font__face--accent;
+	background-color: $clr_grey-mid;
+	color: $clr_bg-main;
+	font-family: $font_face-accent;
 	font-weight: 600;
 	padding: ($baseline / 2);
 	margin: ($baseline / 2) 0;
 	text-transform: uppercase;
-	font-size: $font__size--sml;
+	font-size: $font_size-sml;
 	&:before {
 		display: block;
 		content: "";
@@ -21,7 +21,7 @@
 		height: 0;
 		border-style: solid;
 		border-width: 0 ($baseline / 2) ($baseline / 2) 0;
-		border-color: transparent darken($color__brand--accent, 10%) transparent transparent;
+		border-color: transparent darken($clr_grey-mid, 10%) transparent transparent;
 	}
 	@media screen and (max-width: 567px) {
 		display: block;

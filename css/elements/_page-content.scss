@@ -1,10 +1,10 @@
 article.page--single {
 	width: 100%;
 	.page__content {
-    background: $color__background--main;
+    background: $clr_bg-main;
 		position: relative;
 		z-index: 110;
-		font-size: $font__size--std;
+		font-size: $font_size-std;
 		max-width: 640px;
 		margin: 0 auto;
 		padding: $baseline;
@@ -21,8 +21,8 @@ article.page--single {
 			}
 		}
 		.intro {
-			font-family: $font__face--accent !important;
-			font-size: $font__size--med;
+			font-family: $font_face-accent !important;
+			font-size: $font_size-med;
 			font-weight: 200;
 			line-height: 1.5;
 			p {
@@ -67,21 +67,21 @@ article.page--single {
 			display: block;
 			width: 100%;
 			padding: ($baseline / 2);
-			font-size: $font__size--sml;
+			font-size: $font_size-sml;
 			text-align: center;
-			background-color: darken(rgba($color__background--accent, $opacity--standard), 5%);
+			background-color: darken(rgba($clr_bg-accent, $opacity-standard), 5%);
 		}
 		blockquote {
 			display: block;
 			width: 100%;
 			margin: ($baseline / 2) 0;
 			padding: ($baseline / 2) $baseline;
-			border-left: ($baseline / 4) solid $color__brand--main;
+			border-left: ($baseline / 4) solid $clr_black;
 			font-weight: normal;
 			font-style: italic;
-			color: lighten($font__color--main, 10%);
-			font-size: $font__size--med;
-			font-family: $font__face--accent;
+			color: lighten($font_clr-main, 10%);
+			font-size: $font_size-med;
+			font-family: $font_face-accent;
 			p {
 				font-size: inherit;
 				margin: 0;

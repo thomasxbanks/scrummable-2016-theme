@@ -4,10 +4,10 @@
   left: 0;
   right: 0;
   z-index: 5000;
-  background: rgba($color__brand--main, $opacity--solid);
+  background: rgba($clr_black, $opacity-solid);
   font-size: 0;
   padding: ($baseline / 2) $baseline;
-  transition: bottom $transition__easing--main $transition__speed--fast;
+  transition: bottom $ease-main $speed-fast;
   text-align: center;
   &.open {
 	bottom: 0;
@@ -15,8 +15,8 @@
   li {
 	display: inline-block;
     a {
-      color: $color__background--main;
-      font-size: $font__size--med;
+      color: $clr_bg-main;
+      font-size: $font_size-med;
 	  padding: $baseline;
 	  &:hover {
 		font-weight: bold;

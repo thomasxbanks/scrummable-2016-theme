@@ -7,12 +7,12 @@ aside.sidebar {
 	padding: $baseline ($baseline / 2);
 	transform: translate3d(300px, 0, 0);
 	-webkit-transform: translate3d(300px, 0, 0);
-	transition: $transition__easing--main $transition__speed--fast;
-	background: rgba($color__brand--main, $opacity--solid);
+	transition: $ease-main $speed-fast;
+	background: rgba($clr_black, $opacity-solid);
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
-	color: $color__background--main;
-	box-shadow: inset 4px 0 $color__brand--accent;
+	color: $clr_bg-main;
+	box-shadow: inset 4px 0 $clr_grey-mid;
 	&.open {
 		transform: translate3d(0, 0, 0);
 		-webkit-transform: translate3d(0, 0, 0);
@@ -23,13 +23,13 @@ form {
 	&.searchform {
 		padding: $baseline;
 		input {
-			background-color: rgba($color__background--main, 1);
-			color: $font__color--main;
+			background-color: rgba($clr_bg-main, 1);
+			color: $font_clr-main;
 			width: 100%;
 			&[type="text"] {
-				font-size: $font__size--std;
+				font-size: $font_size-std;
 				line-height: 1;
-				height: $font__size--std;
+				height: $font_size-std;
 				margin: ($baseline / 2) 0;
 				padding: $baseline;
 			}

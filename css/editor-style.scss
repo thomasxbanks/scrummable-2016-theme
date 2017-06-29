@@ -3,13 +3,13 @@
 @import 'typography/typography';
 
 html .mceContentBody, .mce-content-body {
-	background: $color__background--accent;
+	background: $clr_bg-accent;
 	max-width: 640px;
 	padding: $baseline;
 	margin: 0 auto;
 	position: relative;
 	z-index: 110;
-	font-size: $font__size--std;
+	font-size: $font_size-std;
 	max-width: 640px;
 	margin: 0 auto;
 	padding: $baseline;
@@ -25,8 +25,8 @@ html .mceContentBody, .mce-content-body {
 		}
 	}
 	.intro, p:first-child {
-		font-family: $font__face--accent !important;
-		font-size: $font__size--med;
+		font-family: $font_face-accent !important;
+		font-size: $font_size-med;
 		font-weight: 200;
 		line-height: 1.5;
 		p {
@@ -71,21 +71,21 @@ html .mceContentBody, .mce-content-body {
 		display: block;
 		width: 100%;
 		padding: ($baseline / 2);
-		font-size: $font__size--sml;
+		font-size: $font_size-sml;
 		text-align: center;
-		background-color: darken(rgba($color__background--accent, $opacity--standard), 5%);
+		background-color: darken(rgba($clr_bg-accent, $opacity-standard), 5%);
 	}
 	blockquote {
 		display: block;
 		width: 100%;
 		margin: ($baseline / 2) 0;
 		padding: ($baseline / 2) $baseline;
-		border-left: ($baseline / 4) solid $color__brand--main;
+		border-left: ($baseline / 4) solid $clr_black;
 		font-weight: normal;
 		font-style: italic;
-		color: lighten($font__color--main, 10%);
-		font-size: $font__size--med;
-		font-family: $font__face--accent;
+		color: lighten($font_clr-main, 10%);
+		font-size: $font_size-med;
+		font-family: $font_face-accent;
 		p {
 			font-size: inherit;
 			margin: 0;

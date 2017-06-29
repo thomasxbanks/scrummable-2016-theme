@@ -22,17 +22,17 @@
 			padding: ($baseline / 5);
 			li {
 				display: block;
-				background: rgba($color__brand--accent, ($opacity--standard / 4));
+				background: rgba($clr_grey-mid, ($opacity-standard / 4));
 				padding: $baseline;
 				margin: 0 0 $baseline 0;
 				.comment-body {
 					.comment-author {
-						font-size: $font__size--sml;
+						font-size: $font_size-sml;
 						cite {
 							font-weight: bold;
 						}
 						.says {
-							font-size: $font__size--xsm;
+							font-size: $font_size-xsm;
 						}
 						img {
 							@include border-radius(50%);
@@ -40,7 +40,7 @@
 						}
 					}
 					.comment-meta {
-						font-size: $font__size--sml;
+						font-size: $font_size-sml;
 						margin-bottom: 10px;
 					}
 				}

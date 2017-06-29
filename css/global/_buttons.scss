@@ -4,25 +4,25 @@ button, .button, input[type="submit"] {
 	margin: 0 ($baseline / 2);
 	line-height: 1;
 	border: none;
-	font-family: $font__face--accent;
-	font-size: $font__size--sml !important;
+	font-family: $font_face-accent;
+	font-size: $font_size-sml !important;
 	font-weight: bold;
-  color: $color__background--main !important;
+  color: $clr_bg-main !important;
 	text-decoration: none;
 	text-transform: uppercase;
 	text-align: center;
 	cursor: pointer;
 	-webkit-appearance: none;
 	-webkit-font-smoothing: antialiased;
-	background-color: rgba($color__brand--main, 1);
+	background-color: rgba($clr_black, 1);
 	width: auto;
-	transition: $transition__easing--main $transition__speed--fast;
-	-webkit-transition: $transition__easing--main $transition__speed--fast;
+	transition: $ease-main $speed-fast;
+	-webkit-transition: $ease-main $speed-fast;
 	@media screen and (max-width: 400px) {
 		width: 100%;
 	}
 	&:hover {
-		background-color: darken($color__brand--accent, 20%);
+		background-color: darken($clr_grey-mid, 20%);
 	}
 	&.button--big {
 		display: block;

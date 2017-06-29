@@ -12,9 +12,9 @@
 // Calculate color contrast
 @function set-text-color($color) {
   @if (lightness($color) > 50) {
-    @return $font__color--main; // Lighter background, return dark color
+    @return $font_clr-main; // Lighter background, return dark color
   } @else {
-    @return $color__background--main; // Darker background, return light color
+    @return $clr_bg-main; // Darker background, return light color
   }
 }
 

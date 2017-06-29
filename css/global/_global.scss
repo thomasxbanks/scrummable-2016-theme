@@ -26,16 +26,16 @@ html {
 			margin: 0;
 		}
 		// Background
-		background-color: $color__background--accent;
+		background-color: $clr_bg-accent;
 
 		// Text
 		::-moz-selection {
-			color: $color__background--main;
-			background: rgba($color__brand--main, $opacity--solid);
+			color: $clr_bg-main;
+			background: rgba($clr_black, $opacity-solid);
 		}
 		::selection {
-			color: $color__background--main;
-			background: rgba($color__brand--main, $opacity--solid);
+			color: $clr_bg-main;
+			background: rgba($clr_black, $opacity-solid);
 		}
 
 		// Define the centralised maximum width for the main body content
@@ -48,7 +48,7 @@ html {
 		#main {
 			transform: translate(0, 0);
 			-webkit-transform: translate(0, 0);
-			transition: $transition__easing--main $transition__speed--fast;
+			transition: $ease-main $speed-fast;
 			&.open {
 				transform: translate(-300px, 0);
 				-webkit-transform: translate(-300px, 0);
@@ -76,7 +76,7 @@ html {
 	// Scrollbars - Chrome/WebKit only. Will appear as normal in other browsers.
 	::-webkit-scrollbar {
 		width: ($baseline / 2);
-		background: rgba($color__brand--main, $opacity--solid);
+		background: rgba($clr_black, $opacity-solid);
 	}
 
 	::-webkit-scrollbar-track {
@@ -88,11 +88,11 @@ html {
 	}
 
 	::-webkit-scrollbar-thumb {
-		background: rgba($color__brand--main, $opacity--solid);
-		border: 1px solid rgba($color__background--main, $opacity--standard);
+		background: rgba($clr_black, $opacity-solid);
+		border: 1px solid rgba($clr_bg-main, $opacity-standard);
 		@include border-radius(10px);
 		&:hover {
-			background: rgba($color__brand--accent, $opacity--solid);
+			background: rgba($clr_grey-mid, $opacity-solid);
 		}
 	}
 }

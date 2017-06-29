@@ -3,62 +3,48 @@ $baseline: 18px;
 $bl: $baseline;
 
 // Colors
-$color__brand--main: #121212;
-$color__brand--accent: #bababa;
-$color__background--main: #fefefe;
-$color__background--accent: #fafafa;
+$clr_brand: #a1213d;
+$clr_black: #010101;
+$clr_grey-dark: #374043;
+$clr_grey-mid: #465255;
+$clr_grey-light: #edeff0;
+$clr_white: #fffffe;
 
-$color__message--error: #aa0000;
-$color__message--success: #00aa00;
+$clr_error: hsb(0, 100, 50);
+$clr_success: hsb(120, 100, 50);
+$clr_warning: hsb(30, 100, 50);
 
-$color__shadow: #101010;
+$clr_bg-accent: $clr_grey-light;
+$clr_bg-main: $clr_white;
+
+$clr_shadow: $clr_black;
 
 // Fonts
 @import url( 'https://fonts.googleapis.com/css?family=Comfortaa|Overpass:300');
-$font__face--main: "Overpass", Arial, "Helvetica Neue", Helvetica, sans-serif;
-$font__face--accent: "Comfortaa", "Times New Roman", Times, Baskerville, Georgia, serif;
+$font_face-main: "Overpass", Arial, "Helvetica Neue", Helvetica, sans-serif;
+$font_face-accent: "Comfortaa", "Times New Roman", Times, Baskerville, Georgia, serif;
 
-$font__color--main: #222221;
-$font__color--error: $color__message--error;
-$font__color--success: $color__message--success;
+$font_clr-main: $clr_grey-dark;
 
-$font__size--xsm: ($baseline * 0.5);
-$font__size--sml: ($baseline * 0.66);
-$font__size--std: $baseline;
-$font__size--med: ($baseline * 1.33);
-$font__size--lrg: ($baseline * 1.66);
-$font__size--xlg: ($baseline * 2.33);
+$font_size-xsm: ($baseline * 0.6);
+$font_size-sml: ($baseline * 0.8);
+$font_size-std: $baseline;
+$font_size-med: ($baseline * 1.33);
+$font_size-lrg: ($baseline * 1.66);
+$font_size-xlg: ($baseline * 2.33);
+
+$line-height: 1.66;
+$lh: $line-height;
 
 // Opacity
-$opacity--transparent: 0;
-$opacity--standard: 0.75;
-$opacity--solid: 1;
-
-// Color change
-$color__change--slight: 5%;
-$color__change--main: 10%;
-$color__change--full: 100%;
+$opacity-transparent: 0;
+$opacity-standard: 0.66;
+$opacity-solid: 1;
 
 // CSS3 Transitions
-$transition__easing--main: cubic-bezier(0.64, 0.22, 0.69, 0.98);
-$transition__easing--bounce: cubic-bezier(.66,-0.59,.39,1.51);
+$ease-main: cubic-bezier(0.64, 0.22, 0.69, 0.98);
+$ease-bounce: cubic-bezier(.66,-0.59,.39,1.51);
 
-$transition__speed--fastest: 180ms;
-$transition__speed--fast: 200ms;
-$transition__speed--slow: 800ms;
-
-// Viewport Sizes
-$mobile-portrait-width-min: 0;
-$mobile-portrait-width-max: 360px;
-$mobile-landscape-width-min: 361px;
-$mobile-landscape-width-max: 567px;
-$phablet-width-min: 568px;
-$phablet-width-max: 767px;
-$tablet-width-min: 768px;
-$tablet-width-max: 1023px;
-$desktop-small-width-min: 1024px;
-$desktop-small-width-max: 1279px;
-$desktop-large-width-min: 1280px;
-
-// Global Layout Variables
-$z-base: 0;
+$speed-fastest: 180ms;
+$speed-fast: 200ms;
+$speed-slow: 800ms;

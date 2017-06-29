@@ -1,8 +1,8 @@
 // Body Copy
 body {
-	font-family: $font__face--main;
+	font-family: $font_face-main;
 	font-size: 1rem;
-	color: $font__color--main;
+	color: $font_clr-main;
 	letter-spacing: normal;
 	font-style: normal;
 	text-decoration: none;
@@ -25,27 +25,27 @@ body {
 		display: block;
 		padding: 0;
 		margin: 0;
-		font-family: $font__face--accent;
+		font-family: $font_face-accent;
 	}
 
 	h1 {
-		font-size: $font__size--xlg;
+		font-size: $font_size-xlg;
 		font-weight: 600;
 	}
 
 	h2 {
-		font-size: $font__size--lrg;
+		font-size: $font_size-lrg;
 		font-weight: 600;
-		color: $color__brand--main;
+		color: $clr_black;
 	}
 
 	h3 {
-		font-size: $font__size--med;
-		color: $color__brand--main;
+		font-size: $font_size-med;
+		color: $clr_black;
 	}
 
 	h4, h5, h6 {
-		font-size: $font__size--std;
+		font-size: $font_size-std;
 		font-weight: bold;
 		text-transform: uppercase;
 	}
@@ -58,7 +58,7 @@ body {
 	}
 
 	hr {
-		color: $color__brand--main;
+		color: $clr_black;
 		height: 1px;
 		opacity: 0.2;
 		margin: ($baseline / 2) 0 (($baseline / 2) - 1) 0;
@@ -67,8 +67,8 @@ body {
 	// HTML Styling
 	pre, .pre {
 		display: block;
-		background-color: darken($color__background--main, 2%);
-		border: 1px solid darken($color__background--main, 5%);
+		background-color: darken($clr_bg-main, 2%);
+		border: 1px solid darken($clr_bg-main, 5%);
 		font-family: "Courier New", Courier, monospace;
 		font-size: ($baseline - 2);
 		padding: $baseline;

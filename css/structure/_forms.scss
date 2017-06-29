@@ -4,17 +4,17 @@ form {
 	input, textarea {
 		padding: 0 ($baseline);
 		margin: 0;
-		border: 2px solid $color__brand--main;
-		font-family: $font__face--main;
-		font-size: $font__size--std;
+		border: 2px solid $clr_black;
+		font-family: $font_face-main;
+		font-size: $font_size-std;
 		font-weight: normal;
-		color: $color__background--main;
+		color: $clr_bg-main;
 		text-decoration: none;
 		-webkit-appearance: none;
 		-webkit-font-smoothing: antialiased;
 		background: none;
 		@include border-radius(8px);
-		transition: $transition__easing--main $transition__speed--fast;
+		transition: $ease-main $speed-fast;
 	}
 
 }
