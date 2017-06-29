@@ -3,10 +3,13 @@
 	text-decoration: none;
 	color: inherit;
 	font-family: $font_face-accent;
-	font-size: $font_size-std;
+	font-size: $font_size-sml;
+	font-weight: bold;
+	text-transform: uppercase;
 	margin-top: 1rem;
 	box-shadow: none !important;
 	position: relative;
+
 	.arrow {
 		display: inline-block;
 		margin-left: 0.5rem;

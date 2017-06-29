@@ -785,7 +785,9 @@ button:focus, select:focus, input:focus, textarea:focus {
   text-decoration: none;
   color: inherit;
   font-family: "Comfortaa", "Times New Roman", Times, Baskerville, Georgia, serif;
-  font-size: 18px;
+  font-size: 14.4px;
+  font-weight: bold;
+  text-transform: uppercase;
   margin-top: 1rem;
   box-shadow: none !important;
   position: relative; }
