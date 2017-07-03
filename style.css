@@ -1615,7 +1615,16 @@ article.post-single {
   article.post-single .post__footer {
     display: block;
     line-height: 1.66;
-    margin: 2rem 1rem; }
+    margin: 2rem auto; }
+
+.single-post main.central-column {
+  max-width: 100% !important; }
+
+.single-post main.grid_container {
+  padding: 0 !important; }
+
+.single-post .post-single {
+  margin: 0 !important; }
 
 article.page--single {
   width: 100%; }
