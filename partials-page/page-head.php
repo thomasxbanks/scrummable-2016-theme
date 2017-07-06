@@ -1,5 +1,4 @@
 <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0'>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 <!--Load Favicons-->
 <!-- For IE 9 and below. ICO should be 32x32 pixels in size -->
 <!--[if IE]>

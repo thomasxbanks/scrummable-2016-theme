@@ -38,3 +38,15 @@ function scrummable_scripts()
 }
 
 add_action('wp_enqueue_scripts', 'scrummable_scripts');
+
+// Removes query strings from asset urls for performance
+function _remove_script_version( $src ){
+$parts = explode( '?', $src );
+return $parts[0];
+}
+add_filter( 'script_loader_src', '_remove_script_version', 15, 1 );
+add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
+
+// Modify revisions to reduce database size
+define('AUTOSAVE_INTERVAL', 300 );
+define('WP_POST_REVISIONS', false );
