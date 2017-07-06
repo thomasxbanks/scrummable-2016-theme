@@ -1,13 +1,6 @@
 .post__data--meta {
-	font-size: $font_size-xsm;
-  color: $clr_grey-mid;
-	padding: 0;
-	margin-bottom: $baseline;
-
 	ul {
 		li {
-			font-size: $font_size-xsm;
-			line-height: $lh;
 			&:before {
 				font-family: FontAwesome;
 				content: "";
@@ -64,6 +57,20 @@
 					@include animation(pulse 0.25s 1);
 				}
 			}
+		}
+	}
+}
+
+.post__data {
+	font-size: $font_size-xsm;
+  color: $clr_grey-mid;
+	padding: 0;
+	margin-bottom: $baseline;
+
+	ul {
+		li {
+			font-size: $font_size-xsm !important;
+			line-height: $lh;
 		}
 	}
 	cite {

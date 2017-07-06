@@ -1,14 +1,17 @@
 article.post-single {
 	width: 100%;
+	.inner {
+		@extend .central-column;
+	}
 	.post__content {
+		display: block;
     background: $clr_bg-main;
 		position: relative;
 		z-index: 110;
 		font-size: 1rem;
-		max-width: 640px;
 		margin: 0 auto;
 		padding: $baseline;
-		line-height: 1.66;
+		line-height: $lh;
 		text-align: left;
 		ul, ol {
 			padding: $baseline ($baseline * 2);
@@ -73,7 +76,7 @@ article.post-single {
 			background-color: darken(rgba($clr_bg-accent, $opacity-solid), 5%);
 			position: relative;
 			&:before {
-				@media screen and (min-width: 767px) {
+
 					content: "";
 					width: 0;
 					height: 0;
@@ -84,7 +87,7 @@ article.post-single {
 					top: -($baseline);
 					left: ($baseline * 2);
 					z-index: 5000;
-				}
+
 			}
 		}
 		blockquote {
@@ -121,8 +124,17 @@ article.post-single {
 		}
 	}
   .post__footer {
+		@extend .item-7;
     display: block;
     line-height: $lh;
     margin: 2rem auto;
   }
+	.post__author--bio {
+		@extend .item-7;
+		@extend .central-column;
+		@extend .post__content;
+    display: block;
+    line-height: $lh;
+    margin: 2rem auto;
+	}
 }

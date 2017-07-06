@@ -6,7 +6,7 @@
 	position: relative;
 
 	.inner {
-		padding: 1rem;
+		padding: 2rem;
 		text-align: left;
 	}
 
@@ -19,6 +19,7 @@
 	.hero__title--post {
 		font-size: $font_size-lrg;
 		line-height: $lh;
+		padding: 2rem;
 	}
 
 	p {
