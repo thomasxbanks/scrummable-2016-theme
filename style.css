@@ -1006,15 +1006,15 @@ ul.list--flags {
 .post a:link {
   font-family: inherit;
   text-decoration: none;
-  box-shadow: inset 0 -2px 0 #a1213d;
-  padding-bottom: 2px;
+  box-shadow: inset 0 -1px 0 #a1213d;
+  padding-bottom: 1px;
   transition: box-shadow cubic-bezier(0.64, 0.22, 0.69, 0.98) 250ms;
   color: inherit;
   cursor: pointer !important; }
   .post a:hover,
   .post a:active:hover,
   .post a:link:hover {
-    box-shadow: inset 0 -3px 0 #a1213d, 0 1px 0 #a1213d; }
+    box-shadow: inset 0 -2px 0 #a1213d, 0 1px 0 #a1213d; }
 
 .post__content--inner ul {
   padding-left: 1rem;
