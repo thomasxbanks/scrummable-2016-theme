@@ -701,9 +701,9 @@ body.theme--dyslexia * {
     width: calc(41.66667% - 20px); }
   .item-6 {
     width: calc(50% - 20px); }
-  .item-7, article.post-single .post__footer, article.post-single .post__author--bio {
+  .item-7 {
     width: calc(58.33333% - 20px); }
-  .item-8 {
+  .item-8, article.post-single .post__footer, article.post-single .post__author--bio {
     width: calc(66.66667% - 20px); }
   .item-9 {
     width: calc(75% - 20px); }
@@ -1525,6 +1525,8 @@ section.navigation {
 
 article.post-single {
   width: 100%; }
+  article.post-single .inner {
+    padding: 0 0.5rem; }
   article.post-single .post__content, article.post-single .post__author--bio {
     display: block;
     background: #fffffe;
@@ -1532,7 +1534,7 @@ article.post-single {
     z-index: 110;
     font-size: 1rem;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 2rem;
     line-height: 1.8;
     text-align: left; }
     article.post-single .post__content ul, article.post-single .post__author--bio ul, article.post-single .post__content ol, article.post-single .post__author--bio ol {

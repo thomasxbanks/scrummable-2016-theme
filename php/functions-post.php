@@ -6,10 +6,10 @@ function custom_post($variant) {
     (is_sticky()) ? $post_classes .= " post-featured" : null;
     switch ($count) {
       case 1:
-          $post_classes .= " item-7";
+          $post_classes .= " item-8";
           break;
       case 2:
-          $post_classes .= " item-5";
+          $post_classes .= " item-4";
           break;
       case 3:
           $post_classes .= " item-5";

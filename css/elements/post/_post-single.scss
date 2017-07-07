@@ -2,6 +2,7 @@ article.post-single {
 	width: 100%;
 	.inner {
 		@extend .central-column;
+		padding: 0 0.5rem;
 	}
 	.post__content {
 		display: block;
@@ -10,7 +11,7 @@ article.post-single {
 		z-index: 110;
 		font-size: 1rem;
 		margin: 0 auto;
-		padding: $baseline;
+		padding: 2rem;
 		line-height: $lh;
 		text-align: left;
 		ul, ol {
@@ -124,13 +125,13 @@ article.post-single {
 		}
 	}
   .post__footer {
-		@extend .item-7;
+		@extend .item-8;
     display: block;
     line-height: $lh;
     margin: 2rem auto;
   }
 	.post__author--bio {
-		@extend .item-7;
+		@extend .item-8;
 		@extend .central-column;
 		@extend .post__content;
     display: block;
