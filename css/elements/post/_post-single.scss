@@ -1,12 +1,14 @@
 article.post-single {
 	width: 100%;
+
 	.inner {
 		@extend .central-column;
 		padding: 0 0.5rem;
 	}
+
 	.post__content {
 		display: block;
-    background: $clr_bg-main;
+		background: $clr_bg-main;
 		position: relative;
 		z-index: 110;
 		font-size: 1rem;
@@ -14,21 +16,27 @@ article.post-single {
 		padding: 2rem;
 		line-height: $lh;
 		text-align: left;
-		ul, ol {
+
+		ol,
+		ul {
 			padding: $baseline ($baseline * 2);
+
 			li {
 				line-height: 1.5;
 				padding-bottom: ($baseline / 2);
+
 				&:last-child {
 					padding-bottom: 0;
 				}
 			}
 		}
+
 		.intro {
 			font-family: $font_face-accent !important;
 			font-size: $font_size-med;
 			font-weight: 200;
 			line-height: 1.5;
+
 			p {
 				font-family: inherit;
 				font-size: inherit;
@@ -36,38 +44,57 @@ article.post-single {
 				line-height: inherit;
 			}
 		}
-		h1, h2, h3, h4, h5, h6 {
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
 			line-height: 125%;
 			margin: ($baseline * 3) 0 $baseline 0;
 		}
-		.alignleft, .alignright, .aligncenter, .alignnone {
+
+		.aligncenter,
+		.alignleft,
+		.alignnone,
+		.alignright {
 			display: block;
 			margin-top: $baseline;
 			margin-bottom: $baseline;
 			vertical-align: text-top;
 		}
+
 		.alignleft {
 			float: left;
 			margin-left: 0;
 			margin-right: $baseline;
 		}
+
 		.alignright {
 			float: right;
 			margin-left: $baseline;
 			margin-right: 0;
 		}
-		.aligncenter, .alignnone {
+
+		.aligncenter,
+		.alignnone {
 			float: none;
 			margin-left: auto;
 			margin-right: auto;
 		}
-		img, figure, .wp-caption {
+
+		.wp-caption,
+		figure,
+		img {
 			display: block;
 			max-width: 100% !important;
 			height: auto !important;
 			margin: 0 auto;
 		}
-		figcaption, .wp-caption-text {
+
+		.wp-caption-text,
+		figcaption {
 			display: block;
 			width: 100%;
 			padding: ($baseline / 2);
@@ -76,21 +103,21 @@ article.post-single {
 			text-align: center;
 			background-color: darken(rgba($clr_bg-accent, $opacity-solid), 5%);
 			position: relative;
+
 			&:before {
-
-					content: "";
-					width: 0;
-					height: 0;
-					border-left: $baseline solid transparent;
-					border-right: $baseline solid transparent;
-					border-bottom: $baseline solid darken(rgba($clr_bg-accent, $opacity-solid), 5%);
-					position: absolute;
-					top: -($baseline);
-					left: ($baseline * 2);
-					z-index: 5000;
-
+				content: "";
+				width: 0;
+				height: 0;
+				border-left: $baseline solid transparent;
+				border-right: $baseline solid transparent;
+				border-bottom: $baseline solid darken(rgba($clr_bg-accent, $opacity-solid), 5%);
+				position: absolute;
+				top: -($baseline);
+				left: ($baseline * 2);
+				z-index: 5000;
 			}
 		}
+
 		blockquote {
 			display: block;
 			width: 100%;
@@ -102,40 +129,37 @@ article.post-single {
 			color: lighten($font_clr-main, 10%);
 			font-size: $font_size-std;
 			font-family: $font_face-accent;
+
 			p {
 				font-size: inherit;
 				margin: 0;
 			}
-			a {
-				text-decoration: none;
-			}
-			a span, span, span a, cite, a cite, cite a {
+
+            cite {
 				display: block;
-				text-align: right;
-				&:before {
+				margin-top: 1rem;
+                &:before {
 					content: "~ ";
+					display: inline-block;
+					margin-right: 0.5rem;
 				}
-			}
-			&:before, &:after {
-				content: "";
-				display: table;
-				clear: both;
-				float: none;
-			}
+            }
 		}
 	}
-  .post__footer {
+
+	.post__footer {
 		@extend .item-8;
-    display: block;
-    line-height: $lh;
-    margin: 2rem auto;
-  }
+		display: block;
+		line-height: $lh;
+		margin: 2rem auto;
+	}
+
 	.post__author--bio {
 		@extend .item-8;
 		@extend .central-column;
 		@extend .post__content;
-    display: block;
-    line-height: $lh;
-    margin: 2rem auto;
+		display: block;
+		line-height: $lh;
+		margin: 2rem auto;
 	}
 }

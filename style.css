@@ -1537,12 +1537,15 @@ article.post-single {
     padding: 2rem;
     line-height: 1.8;
     text-align: left; }
-    article.post-single .post__content ul, article.post-single .post__author--bio ul, article.post-single .post__content ol, article.post-single .post__author--bio ol {
+    article.post-single .post__content ol, article.post-single .post__author--bio ol,
+    article.post-single .post__content ul, article.post-single .post__author--bio ul {
       padding: 1rem 2rem; }
-      article.post-single .post__content ul li, article.post-single .post__author--bio ul li, article.post-single .post__content ol li, article.post-single .post__author--bio ol li {
+      article.post-single .post__content ol li, article.post-single .post__author--bio ol li,
+      article.post-single .post__content ul li, article.post-single .post__author--bio ul li {
         line-height: 1.5;
         padding-bottom: 0.5rem; }
-        article.post-single .post__content ul li:last-child, article.post-single .post__author--bio ul li:last-child, article.post-single .post__content ol li:last-child, article.post-single .post__author--bio ol li:last-child {
+        article.post-single .post__content ol li:last-child, article.post-single .post__author--bio ol li:last-child,
+        article.post-single .post__content ul li:last-child, article.post-single .post__author--bio ul li:last-child {
           padding-bottom: 0; }
     article.post-single .post__content .intro, article.post-single .post__author--bio .intro {
       font-family: "Comfortaa", "Times New Roman", Times, Baskerville, Georgia, serif !important;
@@ -1554,10 +1557,18 @@ article.post-single {
         font-size: inherit;
         font-weight: inherit;
         line-height: inherit; }
-    article.post-single .post__content h1, article.post-single .post__author--bio h1, article.post-single .post__content h2, article.post-single .post__author--bio h2, article.post-single .post__content h3, article.post-single .post__author--bio h3, article.post-single .post__content h4, article.post-single .post__author--bio h4, article.post-single .post__content h5, article.post-single .post__author--bio h5, article.post-single .post__content h6, article.post-single .post__author--bio h6 {
+    article.post-single .post__content h1, article.post-single .post__author--bio h1,
+    article.post-single .post__content h2, article.post-single .post__author--bio h2,
+    article.post-single .post__content h3, article.post-single .post__author--bio h3,
+    article.post-single .post__content h4, article.post-single .post__author--bio h4,
+    article.post-single .post__content h5, article.post-single .post__author--bio h5,
+    article.post-single .post__content h6, article.post-single .post__author--bio h6 {
       line-height: 125%;
       margin: 3rem 0 1rem 0; }
-    article.post-single .post__content .alignleft, article.post-single .post__author--bio .alignleft, article.post-single .post__content .alignright, article.post-single .post__author--bio .alignright, article.post-single .post__content .aligncenter, article.post-single .post__author--bio .aligncenter, article.post-single .post__content .alignnone, article.post-single .post__author--bio .alignnone {
+    article.post-single .post__content .aligncenter, article.post-single .post__author--bio .aligncenter,
+    article.post-single .post__content .alignleft, article.post-single .post__author--bio .alignleft,
+    article.post-single .post__content .alignnone, article.post-single .post__author--bio .alignnone,
+    article.post-single .post__content .alignright, article.post-single .post__author--bio .alignright {
       display: block;
       margin-top: 1rem;
       margin-bottom: 1rem;
@@ -1570,16 +1581,20 @@ article.post-single {
       float: right;
       margin-left: 1rem;
       margin-right: 0; }
-    article.post-single .post__content .aligncenter, article.post-single .post__author--bio .aligncenter, article.post-single .post__content .alignnone, article.post-single .post__author--bio .alignnone {
+    article.post-single .post__content .aligncenter, article.post-single .post__author--bio .aligncenter,
+    article.post-single .post__content .alignnone, article.post-single .post__author--bio .alignnone {
       float: none;
       margin-left: auto;
       margin-right: auto; }
-    article.post-single .post__content img, article.post-single .post__author--bio img, article.post-single .post__content figure, article.post-single .post__author--bio figure, article.post-single .post__content .wp-caption, article.post-single .post__author--bio .wp-caption {
+    article.post-single .post__content .wp-caption, article.post-single .post__author--bio .wp-caption,
+    article.post-single .post__content figure, article.post-single .post__author--bio figure,
+    article.post-single .post__content img, article.post-single .post__author--bio img {
       display: block;
       max-width: 100% !important;
       height: auto !important;
       margin: 0 auto; }
-    article.post-single .post__content figcaption, article.post-single .post__author--bio figcaption, article.post-single .post__content .wp-caption-text, article.post-single .post__author--bio .wp-caption-text {
+    article.post-single .post__content .wp-caption-text, article.post-single .post__author--bio .wp-caption-text,
+    article.post-single .post__content figcaption, article.post-single .post__author--bio figcaption {
       display: block;
       width: 100%;
       padding: 0.5rem;
@@ -1588,7 +1603,8 @@ article.post-single {
       text-align: center;
       background-color: #dfe3e4;
       position: relative; }
-      article.post-single .post__content figcaption:before, article.post-single .post__author--bio figcaption:before, article.post-single .post__content .wp-caption-text:before, article.post-single .post__author--bio .wp-caption-text:before {
+      article.post-single .post__content .wp-caption-text:before, article.post-single .post__author--bio .wp-caption-text:before,
+      article.post-single .post__content figcaption:before, article.post-single .post__author--bio figcaption:before {
         content: "";
         width: 0;
         height: 0;
@@ -1613,18 +1629,13 @@ article.post-single {
       article.post-single .post__content blockquote p, article.post-single .post__author--bio blockquote p {
         font-size: inherit;
         margin: 0; }
-      article.post-single .post__content blockquote a, article.post-single .post__author--bio blockquote a {
-        text-decoration: none; }
-      article.post-single .post__content blockquote a span, article.post-single .post__author--bio blockquote a span, article.post-single .post__content blockquote span, article.post-single .post__author--bio blockquote span, article.post-single .post__content blockquote span a, article.post-single .post__author--bio blockquote span a, article.post-single .post__content blockquote cite, article.post-single .post__author--bio blockquote cite, article.post-single .post__content blockquote a cite, article.post-single .post__author--bio blockquote a cite, article.post-single .post__content blockquote cite a, article.post-single .post__author--bio blockquote cite a {
+      article.post-single .post__content blockquote cite, article.post-single .post__author--bio blockquote cite {
         display: block;
-        text-align: right; }
-        article.post-single .post__content blockquote a span:before, article.post-single .post__author--bio blockquote a span:before, article.post-single .post__content blockquote span:before, article.post-single .post__author--bio blockquote span:before, article.post-single .post__content blockquote span a:before, article.post-single .post__author--bio blockquote span a:before, article.post-single .post__content blockquote cite:before, article.post-single .post__author--bio blockquote cite:before, article.post-single .post__content blockquote a cite:before, article.post-single .post__author--bio blockquote a cite:before, article.post-single .post__content blockquote cite a:before, article.post-single .post__author--bio blockquote cite a:before {
-          content: "~ "; }
-      article.post-single .post__content blockquote:before, article.post-single .post__author--bio blockquote:before, article.post-single .post__content blockquote:after, article.post-single .post__author--bio blockquote:after {
-        content: "";
-        display: table;
-        clear: both;
-        float: none; }
+        margin-top: 1rem; }
+        article.post-single .post__content blockquote cite:before, article.post-single .post__author--bio blockquote cite:before {
+          content: "~ ";
+          display: inline-block;
+          margin-right: 0.5rem; }
   article.post-single .post__footer {
     display: block;
     line-height: 1.8;
