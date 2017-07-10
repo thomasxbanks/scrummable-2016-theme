@@ -6,9 +6,11 @@ $(document).ready(function () {
 
 	// If Browser is Internet Explorer or Edge
 	if (detectIE()) {
-		var imgUrl = $('#hero_image').find('img').prop('src');
-		$('#hero_image').css('background-image', 'url("' + imgUrl + '")');
-		$('#hero_image img').css('opacity', 0);
+    var imgUrl = document.querySelectorAll('.hero-full')[0].getAttribute('src')
+		//var imgUrl = $('#hero_image').find('img').prop('src');
+    document.querySelector('#hero_image').style.backgroundImage = `url(${imgUrl})`
+		// $('#hero_image').css('background-image', 'url("' + imgUrl + '")');
+		document.querySelector('#hero_image img').style.opacity = 0
 		$('html').addClass('is-ie');
 	} else {
 		$('html').addClass('not-ie');
@@ -56,7 +58,7 @@ $(document).ready(function () {
 			// Scroll ended for 100ms
 			clearTimeout($.data(this, 'scrollTimer'));
 			$.data(this, 'scrollTimer', setTimeout(function () {
-				
+
 			}, 100));
 			// end Scroll ended for 100ms
 		}
