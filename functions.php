@@ -25,13 +25,7 @@ function scrummable_scripts()
     wp_enqueue_style('scrummable-style', get_stylesheet_uri());
 
     wp_enqueue_script('jQuery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js');
-    wp_enqueue_script('masonry', 'https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.js', array('jQuery'), '20130115', true);
-    wp_enqueue_script('easings', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js', array('jQuery'), '20130115', true);
-    wp_enqueue_script('scrummable-js-vars', get_template_directory_uri() . '/js/variables.js', array(), '20120206', true);
-    wp_enqueue_script('scrummable-js-calc', get_template_directory_uri() . '/js/calculations.js', array(), '20120206', true);
-    wp_enqueue_script('scrummable-js-func', get_template_directory_uri() . '/js/functions.js', array(), '20120206', true);
-    wp_enqueue_script('scrummable-js', get_template_directory_uri() . '/js/main.js', array(), '20120206', true);
-
+    wp_enqueue_script('scrummable-js', get_template_directory_uri() . '/app.js', array(), '20170710', true);
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }

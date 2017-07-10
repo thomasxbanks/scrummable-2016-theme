@@ -27,7 +27,6 @@ body {
 	margin: 0;
 	overflow-x: hidden;
 	@include box-sizing(border-box);
-	opacity: 0;
 	// Background
 	background-color: $clr_bg-accent;
 	// Text

@@ -1,37 +1,34 @@
 function debouncer(func, timeout) {
 	var timeoutID, timeout = timeout || 200;
-	return function () {
-		var scope = this, args = arguments;
+	return function() {
+		var scope = this,
+			args = arguments;
 		clearTimeout(timeoutID);
-		timeoutID = setTimeout(function () {
+		timeoutID = setTimeout(function() {
 			func.apply(scope, Array.prototype.slice.call(args));
 		}, timeout);
 	}
 }
 
-function masonry() {
-	$('.masonry').masonry({
-		// options
-		columnWidth: 200,
-		itemSelector: '.post--teaser'
-	});
-}
-
 function return_to_top() {
 	var distance = (document_height / screen_height);
 	var content_top = (0 + screen_height - $('#masthead').height());
-	if (distance > 5){
+	if (distance > 5) {
 		var transition_speed = 300;
 	} else {
 		var transition_speed = 800;
 	}
-	$("html body").animate({scrollTop: (content_top)}, transition_speed);
+	$("html body").animate({
+		scrollTop: (content_top)
+	}, transition_speed);
 	return false;
 	// TODO: fix nav bar hide on skip-link...
 }
 
 function nudge() {
-	$("html, body").animate({scrollTop: screen_height}, transition_speed_slowest);
+	$("html, body").animate({
+		scrollTop: screen_height
+	}, transition_speed_slowest);
 	return false;
 }
 
@@ -82,15 +79,15 @@ function detectIE() {
 function progressive_media() {
 
 	$(".hero-full").each(
-		function () {
+		function() {
 			var url = $(this).attr("src");
 			var thumb = $(this).prev();
-			if (detectIE()){
+			if (detectIE()) {
 				var parent = $(this).parent();
-				$(parent).css('background-image', 'url('+url+')');
+				$(parent).css('background-image', 'url(' + url + ')');
 				$('.hero-full').addClass('hide');
 			}
-			$(this).load(function () {
+			$(this).load(function() {
 				$(thumb).addClass('hide');
 			}).attr('src', url);
 		}
@@ -99,20 +96,21 @@ function progressive_media() {
 
 function vaporise() {
 	if ($("body").length) {
-		$(window).scroll(function () {
-			// Hero Parallax - Post
-			$('.vaporise .hero-full').css({
-				'margin-top': (0 + ($(this).scrollTop()) / 2) + "px"
-			});
-			$('.vaporise .hero__title').css({
-				'filter': "blur(" + (0 + ($(this).scrollTop() / 20)) + "px)",
-				'-webkit-filter': "blur(" + (0 + ($(this).scrollTop() / 20)) + "px)",
-				'opacity': (1 - ($(this).scrollTop()) / 2000),
-				'transform': "scale(" + (1 - ($(this).scrollTop()) / 500) + ")",
-				'-webkit-transform': "scale(" + (1 - ($(this).scrollTop()) / 500) + ")"
-			});
+		$(window).scroll(function() {
+      let vaporise = document.querySelector('.vaporise .hero__title')
+			let parallax = document.querySelector('.vaporise .hero-full')
+			let scroll = window.pageYOffset;
+			let opacity = ((1 - (scroll / 1000)) > 0) ? (1 - (scroll / 1000)) : 0
+			let scale = ((1 + (scroll / 1000)) > 1) ? (1 + (scroll / 1000)) : 1
+			let blur = ((1 + (scroll / 10)) > 1) ? (1 + (scroll / 100)) : 0
+			if (scroll < browser.height) {
+				parallax.style.marginTop = (0 + (scroll / 2)) + "px"
+				vaporise.style.opacity = opacity
+				vaporise.style.transform = `scale(${scale})`
+				vaporise.style.filter = `blur(${blur}px)`
+			}
 			// end Hero Parallax - Post
-		});
+		})
 	}
 }
 
@@ -124,7 +122,9 @@ function sidebar(variant) {
 }
 
 function bsod() {
-	$('#bsod').animate({'opacity': 0}, 500, function () {
+	$('#bsod').animate({
+		'opacity': 0
+	}, 500, function() {
 		$(this).remove();
 	});
 }
@@ -136,13 +136,6 @@ function global_functions() {
 	if ($(window).scrollTop() > 0) {
 		$('#masthead.fade-in').addClass('open');
 	}
-  setTimeout(()=>{
-  masonry();
-}, 2000);
-
-  progressive_media();
-  vaporise();
-	$('body').animate({'opacity': 1}, 1000, function () {
-
-	});
+	progressive_media();
+	vaporise();
 };

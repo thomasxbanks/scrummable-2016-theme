@@ -24,12 +24,16 @@ header.post__header {
 		padding: 0;
 		@include linear-gradient(rgba($clr_shadow, $opacity-transparent), rgba($clr_shadow, $opacity-standard));
 	}
+
 	h1 {
-		max-width: 767px;
+		max-width: 800px;
 		margin: 0 auto;
 		padding: 1rem;
+		@media (max-width: 800px) {
+			padding: 2rem;
+		}
 		text-align: left;
-    font-family: $font_face-accent;
+		font-family: $font_face-accent;
 		color: $clr_bg-main;
 		text-shadow: 0 0 $baseline rgba($clr_shadow, $opacity-solid);
 		text-decoration: none;
@@ -86,11 +90,11 @@ header.post__header {
 	-o-object-fit: cover;
 	object-position: top center;
 	-o-object-position: top center;
-	transition: opacity 1s;
+	transition: opacity $ease-main $speed-slow;
 	position: absolute;
 	top: 0;
-	left: 0;
 	right: 0;
+	left: 0;
 }
 
 .hero-thumb {

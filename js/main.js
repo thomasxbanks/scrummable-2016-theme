@@ -24,7 +24,7 @@ $(document).ready(function () {
 	$(window).on('scroll scrollstart', function () {
 		var scroll = $(window).scrollTop();
 		// log for debug
-		console.log(screen_height, scroll);
+		// console.log(screen_height, scroll);
 		// Show/hide Masthead
 		if (scroll > (screen_height / 2)) {
 			$('.home #masthead.fade-in').addClass('open');

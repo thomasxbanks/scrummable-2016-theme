@@ -3,11 +3,10 @@ article.post-single {
 
 	.inner {
 		@extend .central-column;
-		padding: 0 0.5rem;
 	}
 
 	.post__content {
-		max-width: 767px;
+		max-width: calc(800px - 2rem);
 		display: block;
 		background: $clr_bg-main;
 		position: relative;
