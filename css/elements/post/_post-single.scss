@@ -7,6 +7,7 @@ article.post-single {
 	}
 
 	.post__content {
+		max-width: 767px;
 		display: block;
 		background: $clr_bg-main;
 		position: relative;
@@ -90,7 +91,7 @@ article.post-single {
 			display: block;
 			max-width: 100% !important;
 			height: auto !important;
-			margin: 0 auto;
+			margin: 0 auto !important;
 		}
 
 		.wp-caption-text,
@@ -138,6 +139,11 @@ article.post-single {
             cite {
 				display: block;
 				margin-top: 1rem;
+                font-size: $font_size-sml;
+                font-style: normal;
+                a {
+                    font-size: inherit;
+                }
                 &:before {
 					content: "~ ";
 					display: inline-block;

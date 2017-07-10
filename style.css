@@ -1231,7 +1231,7 @@ header.post__header {
     background: -o-linear-gradient(rgba(1, 1, 1, 0), rgba(1, 1, 1, 0.66));
     background: -ms-linear-gradient(rgba(1, 1, 1, 0), rgba(1, 1, 1, 0.66)); }
   .post__wrapper--image h1 {
-    max-width: 640px;
+    max-width: 767px;
     margin: 0 auto;
     padding: 1rem;
     text-align: left;
@@ -1528,6 +1528,7 @@ article.post-single {
   article.post-single .inner {
     padding: 0 0.5rem; }
   article.post-single .post__content, article.post-single .post__author--bio {
+    max-width: 767px;
     display: block;
     background: #fffffe;
     position: relative;
@@ -1592,7 +1593,7 @@ article.post-single {
       display: block;
       max-width: 100% !important;
       height: auto !important;
-      margin: 0 auto; }
+      margin: 0 auto !important; }
     article.post-single .post__content .wp-caption-text, article.post-single .post__author--bio .wp-caption-text,
     article.post-single .post__content figcaption, article.post-single .post__author--bio figcaption {
       display: block;
@@ -1631,7 +1632,11 @@ article.post-single {
         margin: 0; }
       article.post-single .post__content blockquote cite, article.post-single .post__author--bio blockquote cite {
         display: block;
-        margin-top: 1rem; }
+        margin-top: 1rem;
+        font-size: 0.8rem;
+        font-style: normal; }
+        article.post-single .post__content blockquote cite a, article.post-single .post__author--bio blockquote cite a {
+          font-size: inherit; }
         article.post-single .post__content blockquote cite:before, article.post-single .post__author--bio blockquote cite:before {
           content: "~ ";
           display: inline-block;

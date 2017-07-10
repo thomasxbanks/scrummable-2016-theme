@@ -24,9 +24,8 @@ header.post__header {
 		padding: 0;
 		@include linear-gradient(rgba($clr_shadow, $opacity-transparent), rgba($clr_shadow, $opacity-standard));
 	}
-
 	h1 {
-		max-width: 640px;
+		max-width: 767px;
 		margin: 0 auto;
 		padding: 1rem;
 		text-align: left;
