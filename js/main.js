@@ -33,11 +33,11 @@ $(document).ready(function () {
 		}
 
 		if (scroll > screen_height) {
-			$('#masthead [aria-label="Skip to content"] .fa').removeClass('fa-arrow-down');
-			$('#masthead [aria-label="Skip to content"] .fa').addClass('fa-arrow-up');
+            document.querySelector('.scroll-up').setAttribute('data-state', 'shown')
+            document.querySelector('.scroll-down').setAttribute('data-state', 'hidden')
 		} else {
-			$('#masthead [aria-label="Skip to content"] .fa').removeClass('fa-arrow-up');
-			$('#masthead [aria-label="Skip to content"] .fa').addClass('fa-arrow-down');
+            document.querySelector('.scroll-up').setAttribute('data-state', 'hidden')
+            document.querySelector('.scroll-down').setAttribute('data-state', 'shown')
 		}
 
 		//console.log("doc_height: "+document_height+". \nscreen_height: "+screen_height+". \ndoc - screen: "+(document_height - screen_height)+". scroll: "+scroll);

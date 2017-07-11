@@ -1,57 +1,81 @@
 .post__data--meta {
 	ul {
 		li {
+			margin-right: 0.5rem;
 			&:before {
 				font-family: FontAwesome;
 				content: "";
-				padding-right: 0.5em;
+				margin-right: 0.25rem;
 				display: inline-block;
+				width: 1rem;
+				height: 1rem;
+				line-height: $lh;
+				vertical-align: middle;
+				background-size: cover;
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-attachment: scroll;
 			}
+
 			&.author {
 				&:before {
-					content: "\f007";
+					content: "";
+					background-image: url("/wp-content/themes/scrummable-2016-theme-v2/img/ui/user.svg");
 				}
 			}
+
 			&.date {
 				&:before {
-					content: "\f073";
+					content: "";
+					background-image: url("/wp-content/themes/scrummable-2016-theme-v2/img/ui/calendar.svg");
 				}
 			}
+
 			&.read_time {
 				&:before {
-					content: "\f017";
+					content: "";
+					background-image: url("/wp-content/themes/scrummable-2016-theme-v2/img/ui/time.svg");
 				}
 			}
+
 			&.comments {
 				&:before {
 					content: "\f086";
 				}
 			}
+
 			&.read_comments {
 				&:before {
 					content: "\f02d";
 				}
 			}
+
 			&.write_comments {
 				&:before {
-					content: "\f040";
+					content: "";
+					background-image: url("/wp-content/themes/scrummable-2016-theme-v2/img/ui/edit.svg");
 				}
 			}
+
 			&.edit {
 				&:before {
-					content: "\f040";
+					content: "";
+					background-image: url("/wp-content/themes/scrummable-2016-theme-v2/img/ui/edit.svg");
 				}
 			}
+
 			&.twitter {
 				&:before {
 					content: "\f099";
 				}
 			}
+
 			&.instagram {
 				&:before {
 					content: "\f16d";
 				}
 			}
+
 			&:hover {
 				&:before {
 					@include animation(pulse 0.25s 1);
@@ -63,7 +87,7 @@
 
 .post__data {
 	font-size: $font_size-xsm;
-  color: $clr_grey-mid;
+	color: $clr_grey-mid;
 	padding: 0;
 	margin-bottom: $baseline;
 
@@ -73,12 +97,15 @@
 			line-height: $lh;
 		}
 	}
+
 	cite {
 		font-style: normal;
 	}
+
 	.author__avatar {
 		@include border-radius(50%);
 		display: inline-block;
+
 		&.author__avatar--small {
 			width: $font_size-sml;
 			height: $font_size-sml;
