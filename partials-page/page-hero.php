@@ -5,7 +5,6 @@ $classes .= " hero__image--page";
 $thumb_id = get_post_thumbnail_id(get_the_ID());
 $alt_text = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 ?>
-<?php echo "XXX - " . wp_get_attachment_url( get_option( media_selector_attachment_id ) ) . " - YYY"; ?>
 <header class="post__header">
     <section class="hero-image <?php echo $classes; ?>" data-role="hero-image" aria-label="Page Main Image">
         <?php
