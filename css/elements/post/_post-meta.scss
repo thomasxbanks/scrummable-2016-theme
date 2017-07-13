@@ -20,6 +20,7 @@
 			&.author {
 				&:before {
 					content: "";
+					fill: tomato;
 					background-image: url("/wp-content/themes/scrummable-2016-theme-v2/img/ui/user.svg");
 				}
 			}
@@ -40,39 +41,22 @@
 
 			&.comments {
 				&:before {
-					content: "\f086";
+          content: "";
+					background-image: url("/wp-content/themes/scrummable-2016-theme-v2/img/ui/comments.svg");
 				}
 			}
 
 			&.read_comments {
 				&:before {
-					content: "\f02d";
+          content: "";
+					background-image: url("/wp-content/themes/scrummable-2016-theme-v2/img/ui/comments.svg");
 				}
 			}
 
-			&.write_comments {
+			&.write_comments, &.edit {
 				&:before {
 					content: "";
 					background-image: url("/wp-content/themes/scrummable-2016-theme-v2/img/ui/edit.svg");
-				}
-			}
-
-			&.edit {
-				&:before {
-					content: "";
-					background-image: url("/wp-content/themes/scrummable-2016-theme-v2/img/ui/edit.svg");
-				}
-			}
-
-			&.twitter {
-				&:before {
-					content: "\f099";
-				}
-			}
-
-			&.instagram {
-				&:before {
-					content: "\f16d";
 				}
 			}
 

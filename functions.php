@@ -21,7 +21,6 @@ get_template_part('php/functions', 'editor-style');
 
 function scrummable_scripts()
 {
-    wp_enqueue_style('scrummable-fa-style', '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
     wp_enqueue_style('scrummable-style', get_stylesheet_uri());
 
     wp_enqueue_script('jQuery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js');
@@ -93,3 +92,14 @@ $urls = array_diff( $urls, array( $emoji_svg_url ) );
 
 return $urls;
 }
+
+// display featured post thumbnails in WordPress feeds
+function wcs_post_thumbnails_in_feeds( $content ) {
+    global $post;
+    if( has_post_thumbnail( $post->ID ) ) {
+        $content = '<p>' . get_the_post_thumbnail( $post->ID ) . '</p>' . $content;
+    }
+    return $content;
+}
+add_filter( 'the_excerpt_rss', 'wcs_post_thumbnails_in_feeds' );
+add_filter( 'the_content_feed', 'wcs_post_thumbnails_in_feeds' );

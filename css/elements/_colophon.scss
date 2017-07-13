@@ -4,6 +4,10 @@ footer#colophon {
 	display: block;
 	width: 100%;
 	padding: $baseline;
+  #copyright small {
+    font-size: $font_size-xsm;
+    color: $clr_grey-mid;
+  }
 }
 
 button#return_to_top {
