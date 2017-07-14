@@ -9,7 +9,7 @@ $alt_text = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
     <section class="hero-image <?php echo $classes; ?>" data-role="hero-image" aria-label="Page Main Image">
         <?php
         if (!is_page()) { ?>
-            <img class="hero-thumb" src="<?php echo wp_get_attachment_url( get_option( media_selector_attachment_id ) ); ?>" alt="<?php echo (count($alt_text)) ? $alt_text : get_the_title(); ?>">
+            <img class="hero-thumb" src="<?php echo wp_get_attachment_thumb_url( get_option( media_selector_attachment_id ) ); ?>" alt="<?php echo (count($alt_text)) ? $alt_text : get_the_title(); ?>">
             <img class="hero-full" src="<?php echo wp_get_attachment_url( get_option( media_selector_attachment_id ) ); ?>" alt="<?php echo (count($alt_text)) ? $alt_text : get_the_title(); ?>">
         <?php } else { ?>
             <img class="hero-thumb" src="<?php echo (get_the_post_thumbnail_url(get_the_ID())) ? the_post_thumbnail_url('medium') : wp_get_attachment_url( get_option( media_selector_attachment_id ) ); ?>" alt="<?php echo (count($alt_text)) ? $alt_text : get_the_title(); ?>">
