@@ -43,7 +43,7 @@ aside.sidebar {
 			display: block;
 			padding: 0;
 			margin: 0;
-			box-shadow: inset 0 -2px $clr_bg-main;
+			box-shadow: inset 0 -1px $clr_bg-main;
 
 			&:last-child {
 				box-shadow: inset 0 0 $clr_bg-main;
@@ -56,12 +56,10 @@ aside.sidebar {
 				color: $clr_bg-main;
 				text-decoration: none;
 				padding: $baseline;
-				//@include linear-gradient($clr_black, $clr_black);
 				transition: background-image $ease-main $speed-fast, box-shadow $ease-main $speed-fast;
 
 				&:hover {
-					//@include linear-gradient($clr_black, lighten($clr_black, 10%));
-					box-shadow: inset 0 -4px $clr_bg-main;
+					box-shadow: inset 0 -2px $clr_bg-main, 0 1px $clr_bg-main;
 				}
 			}
 		}

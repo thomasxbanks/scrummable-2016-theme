@@ -34,11 +34,8 @@ $('#masthead.considerate').addClass('slide-away');sidebar('all');// Scroll ended
 clearTimeout($.data(this,'scrollTimer'));$.data(this,'scrollTimer',setTimeout(function(){},100));// end Scroll ended for 100ms
 }else{// Scroll up the page
 $('#masthead.considerate').removeClass('slide-away');sidebar('all');}CurrentScroll=NextScroll;//Updates current scroll position
-// Parallax Hero Image
-$('.entry-header.parallax img').css({'margin-top':0+$(this).scrollTop()/5+"px"});$('.entry-header.parallax h1').css({'filter':'blur('+$(this).scrollTop()/10+'px)','-webkit-filter':'blur('+$(this).scrollTop()/10+'px)','opacity':1-$(this).scrollTop()/1000});});// Mobile Nav Controls
+});// Mobile Nav Controls
 $('.nav-icon button').on("click",function(){var variant=$(this).attr('data-sidebar');sidebar(variant);});// end Mobile Nav Controls
-// Pagination AJAX
-$('#load_posts').on("click",function(e){e.preventDefault(e);var data_page=parseInt($(this).attr('data-page'))+1;var data_last_page=parseInt($(this).attr('data-last-page'));var page_url="/page/"+data_page;$.ajax({type:"GET",url:page_url,async:false,success:function(html){$(html).find("article.post--teaser").each(function(){$('.masonry').append($(this)).masonry('appended',$(this));});$('#load_posts').attr('data-page',data_page);progressive_media();if(data_page>=data_last_page){$('#load_posts').animate({'opacity':0},500,function(){$(this).remove();});}}});});// end Pagaination AJAX
 // 404 page overlay
 $('#bsod').on("click",function(){$(this).animate({'opacity':0},500,function(){$(this).remove();});});setTimeout(bsod,3000);// end 404 page overlay
 });// Functions on resize
