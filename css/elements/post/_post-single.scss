@@ -19,7 +19,8 @@ article.post-single {
 
 		ol,
 		ul {
-			padding: $baseline ($baseline * 2);
+			padding: 0 0 0 1.3rem;
+			margin: 1rem 0 1.3rem;
 
 			li {
 				line-height: 1.5;
@@ -135,20 +136,22 @@ article.post-single {
 				margin: 0;
 			}
 
-            cite {
+			cite {
 				display: block;
 				margin-top: 1rem;
-                font-size: $font_size-sml;
-                font-style: normal;
-                a {
-                    font-size: inherit;
-                }
-                &:before {
+				font-size: $font_size-sml;
+				font-style: normal;
+
+				a {
+					font-size: inherit;
+				}
+
+				&:before {
 					content: "~ ";
 					display: inline-block;
 					margin-right: 0.5rem;
 				}
-            }
+			}
 		}
 	}
 
