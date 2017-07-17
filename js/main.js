@@ -70,16 +70,6 @@ $(document).ready(function () {
 
 		CurrentScroll = NextScroll;  //Updates current scroll position
 
-		// Parallax Hero Image
-		$('.entry-header.parallax img').css({
-			'margin-top': (0 + (($(this).scrollTop()) / 5)) + "px"
-		});
-
-		$('.entry-header.parallax h1').css({
-			'filter': 'blur(' + ($(this).scrollTop() / 10) + 'px)',
-			'-webkit-filter': 'blur(' + ($(this).scrollTop() / 10) + 'px)',
-			'opacity': (1 - ($(this).scrollTop()) / 1000)
-		});
 	});
 
 	// Mobile Nav Controls
@@ -89,31 +79,6 @@ $(document).ready(function () {
 	})
 	// end Mobile Nav Controls
 
-	// Pagination AJAX
-	$('#load_posts').on("click", function (e) {
-		e.preventDefault(e);
-		var data_page = (parseInt($(this).attr('data-page')) + 1);
-		var data_last_page = parseInt($(this).attr('data-last-page'));
-		var page_url = "/page/" + data_page;
-		$.ajax({
-			type: "GET",
-			url: page_url,
-			async: false,
-			success: function (html) {
-				$(html).find("article.post--teaser").each(function () {
-					$('.masonry').append($(this)).masonry('appended', $(this));
-				});
-				$('#load_posts').attr('data-page', data_page);
-				progressive_media();
-				if (data_page >= data_last_page) {
-					$('#load_posts').animate({'opacity': 0}, 500, function () {
-						$(this).remove();
-					});
-				}
-			}
-		});
-	});
-	// end Pagaination AJAX
 
 	// 404 page overlay
 	$('#bsod').on("click", function () {
