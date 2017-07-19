@@ -10,10 +10,16 @@ if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip')) {
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+  <meta charset="UTF-8">
+  <!-- pre-fetch the cdn for the googlefonts and analytics. Performance advantage -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//google-analytics.com">
+  <link rel="dns-prefetch" href="//www.google-analytics.com">
 	<title>
 		<?php wp_title(' - ', true, 'right'); ?>
 		<?php bloginfo('name'); ?>
 	</title>
+
 	<?php get_template_part('partials-page/page', 'head'); ?>
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
 	<!--Uncomment this to use a favicon.ico in the theme directory: -->
