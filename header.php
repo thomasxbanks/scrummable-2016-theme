@@ -28,6 +28,7 @@ if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip')) {
     wp_enqueue_script('comment-reply');
 } ?>
 	<?php wp_head(); ?>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js" ></script>
 </head>
 <body <?php body_class(); ?>">
 <?php get_template_part('partials-page/page', 'masthead'); ?>
