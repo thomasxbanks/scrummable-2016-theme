@@ -1,5 +1,5 @@
 // Functons on load
-$(document).ready(function () {
+jQuery(document).ready(function ($) {
 	// onLoad operations
 	document_height();
 	global_functions();

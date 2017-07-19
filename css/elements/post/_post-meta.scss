@@ -21,42 +21,42 @@
 				&:before {
 					content: "";
 					fill: tomato;
-					background-image: url("/wp-content/themes/scrummable-2016-theme-v2/img/ui/user.svg");
+					background-image: url("img/ui/user.svg");
 				}
 			}
 
 			&.date {
 				&:before {
 					content: "";
-					background-image: url("/wp-content/themes/scrummable-2016-theme-v2/img/ui/calendar.svg");
+					background-image: url("img/ui/calendar.svg");
 				}
 			}
 
 			&.read_time {
 				&:before {
 					content: "";
-					background-image: url("/wp-content/themes/scrummable-2016-theme-v2/img/ui/time.svg");
+					background-image: url("img/ui/time.svg");
 				}
 			}
 
 			&.comments {
 				&:before {
           content: "";
-					background-image: url("/wp-content/themes/scrummable-2016-theme-v2/img/ui/comments.svg");
+					background-image: url("img/ui/comments.svg");
 				}
 			}
 
 			&.read_comments {
 				&:before {
           content: "";
-					background-image: url("/wp-content/themes/scrummable-2016-theme-v2/img/ui/comments.svg");
+					background-image: url("img/ui/comments.svg");
 				}
 			}
 
 			&.write_comments, &.edit {
 				&:before {
 					content: "";
-					background-image: url("/wp-content/themes/scrummable-2016-theme-v2/img/ui/edit.svg");
+					background-image: url("img/ui/edit.svg");
 				}
 			}
 
