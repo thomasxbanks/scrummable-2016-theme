@@ -1,4 +1,5 @@
 <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0'>
+<meta name="theme-color" content="#a1213d">
 <!--Load Favicons-->
 <!-- For IE 9 and below. ICO should be 32x32 pixels in size -->
 <!--[if IE]>
