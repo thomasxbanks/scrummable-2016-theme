@@ -18,7 +18,9 @@
   "author": "",
   "license": "ISC",
   "homepage": "https://bitbucket.org/thomasxbanks/scrummable-2016-theme#readme",
-  "dependencies": {},
+  "dependencies": {
+    "node-sass": "^4.5.3"
+  },
   "devDependencies": {
     "babel-cli": "^6.24.1"
   }
