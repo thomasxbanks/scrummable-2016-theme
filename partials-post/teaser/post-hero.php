@@ -11,7 +11,7 @@ $alt_text = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
         <section class="hero-image <?php echo $classes; ?>" data-role="hero-image" aria-label="Post Main Image">
             <?php if (has_post_thumbnail()) : ?>
                 <img class="hero-thumb" src="<?php the_post_thumbnail_url('thumbnail'); ?>" alt="<?php echo (count($alt_text)) ? $alt_text : get_the_title(); ?>">
-                <img class="hero-full" src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php echo (count($alt_text)) ? $alt_text : get_the_title(); ?>">
+                <img class="hero-full" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php echo (count($alt_text)) ? $alt_text : get_the_title(); ?>">
             <?php endif; ?>
             <div class="hero__title--wrapper">
                 <h1 class="hero__title hero__title--post" itemprop="headline">

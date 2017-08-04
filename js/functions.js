@@ -138,4 +138,8 @@ function global_functions() {
 	}
 	progressive_media();
 	vaporise();
+	document.querySelectorAll('.hero-full').forEach((hero)=>{
+		let src = hero.getAttribute('data-src')
+		hero.setAttribute('src', src)
+	})
 };

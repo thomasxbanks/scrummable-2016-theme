@@ -11,9 +11,9 @@ $alt_text = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 		<?php if (has_post_thumbnail()) : ?>
 			<img class="hero-thumb" src="<?php the_post_thumbnail_url('thumbnail'); ?>" alt="<?php echo (count($alt_text)) ? $alt_text : get_the_title(); ?>">
 			<?php if (!is_mobile()) { ?>
-				<img class="hero-full" src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php echo (count($alt_text)) ? $alt_text : get_the_title(); ?>">
+				<img class="hero-full" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php echo (count($alt_text)) ? $alt_text : get_the_title(); ?>">
 			<?php } else { ?>
-				<img class="hero-full" src="<?php the_post_thumbnail_url('large'); ?>" alt="<?php echo (count($alt_text)) ? $alt_text : get_the_title(); ?>">
+				<img class="hero-full" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="<?php the_post_thumbnail_url('large'); ?>" alt="<?php echo (count($alt_text)) ? $alt_text : get_the_title(); ?>">
 			<?php } ?>
 		<?php endif; ?>
 		<div class="hero__title--wrapper">
