@@ -1,3 +1,4 @@
+
 function screen_size() {
 	screen_width = window.innerWidth
 		|| document.documentElement.clientWidth
@@ -15,7 +16,7 @@ function document_height() {
 	document_height = Math.max(body.scrollHeight, body.offsetHeight,
 		html.clientHeight, html.scrollHeight, html.offsetHeight);
 
-	// console.log(document_height);
+	console.log(document_height)
 }
 
 // What are the browser dimensions?
@@ -24,7 +25,11 @@ var browser = {
   height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
 }
 
-function persistent_element_heights() {
-	colophon_height = $('#colophon').height();
-	masthead_height = $('#masthead').height();
+var elementSize = {
+	colophon: {
+		height: document.querySelector('#colophon').clientHeight
+	},
+	masthead: {
+		height: document.querySelector('#masthead').clientHeight
+	}
 }

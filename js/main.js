@@ -1,100 +1,98 @@
-// Functons on load
-jQuery(document).ready(function ($) {
-	// onLoad operations
-	document_height();
-	global_functions();
+// Functions on load
 
-	// If Browser is Internet Explorer or Edge
-	if (detectIE()) {
-    var imgUrl = document.querySelectorAll('.hero-full')[0].getAttribute('src')
-		//var imgUrl = $('#hero_image').find('img').prop('src');
-    document.querySelector('#hero_image').style.backgroundImage = `url(${imgUrl})`
-		// $('#hero_image').css('background-image', 'url("' + imgUrl + '")');
-		document.querySelector('#hero_image img').style.opacity = 0
-		$('html').addClass('is-ie');
+// onLoad operations
+document_height()
+global_functions()
+
+// If Browser is Internet Explorer or Edge
+if (detectIE()) {
+	document.querySelector('html').classList.add('is-ie')
+} else {
+	document.querySelector('html').classList.add('not-ie')
+}
+
+// Functions on Scroll
+var CurrentScroll = 0;
+
+window.onscroll = function () {
+
+
+	var scroll = window.pageYOffset;
+
+	// log for debug
+	//console.log(screen_height, scroll);
+	// Show/hide Masthead
+	if (scroll > (screen_height / 2)) {
+		document.querySelector('#masthead').classList.add('open')
 	} else {
-		$('html').addClass('not-ie');
+		document.querySelector('#masthead').classList.remove('open')
 	}
 
-	// Detect jQuery
-	$('html').toggleClass('no-jquery jquery');
+	if (scroll > screen_height) {
+		document.querySelector('.scroll-up').setAttribute('data-state', 'shown')
+		document.querySelector('.scroll-down').setAttribute('data-state', 'hidden')
+	} else {
+		document.querySelector('.scroll-up').setAttribute('data-state', 'hidden')
+		document.querySelector('.scroll-down').setAttribute('data-state', 'shown')
+	}
 
-	// Functions on Scroll
-	var CurrentScroll = 0;
-	$(window).on('scroll scrollstart', function () {
+	//console.log("doc_height: "+document_height+". \nscreen_height: "+screen_height+". \ndoc - screen: "+(document_height - (screen_height * 2))+". scroll: "+scroll)
 
-		var scroll = window.pageYOffset;
+	if (scroll > (document_height - (screen_height * 2))) {
+		document.querySelector('button#return_to_top').setAttribute('data-state', 'is-shown')
+	} else {
+		document.querySelector('button#return_to_top').setAttribute('data-state', 'not-shown')
+	}
 
-		// log for debug
-		//console.log(screen_height, scroll);
-		// Show/hide Masthead
-		if (scroll > (screen_height / 2)) {
-			$('.home #masthead.fade-in').addClass('open');
-		} else {
-			$('.home #masthead.fade-in').removeClass('open');
+	// close nav on scroll
+	document.querySelectorAll('.sidebar').forEach((navtray) => {
+		if (navtray.getAttribute('data-state') === 'open') {
+			sidebar('all')
 		}
-
-		if (scroll > screen_height) {
-            document.querySelector('.scroll-up').setAttribute('data-state', 'shown')
-            document.querySelector('.scroll-down').setAttribute('data-state', 'hidden')
-		} else {
-            document.querySelector('.scroll-up').setAttribute('data-state', 'hidden')
-            document.querySelector('.scroll-down').setAttribute('data-state', 'shown')
-		}
-
-		console.log("doc_height: "+document_height+". \nscreen_height: "+screen_height+". \ndoc - screen: "+(document_height - (screen_height * 2))+". scroll: "+scroll);
-
-		if (scroll > (document_height - (screen_height * 2))) {
-			document.querySelector('button#return_to_top').setAttribute('data-state', 'is-shown');
-		} else {
-			document.querySelector('button#return_to_top').setAttribute('data-state', 'not-shown');
-		}
-
-		// Directional scroll
-		var NextScroll = $(this).scrollTop();
-		if (NextScroll > CurrentScroll) {
-			// Scroll down the page
-			$('#masthead.considerate').addClass('slide-away');
-			sidebar('all');
-
-			// Scroll ended for 100ms
-			clearTimeout($.data(this, 'scrollTimer'));
-			$.data(this, 'scrollTimer', setTimeout(function () {
-
-			}, 100));
-			// end Scroll ended for 100ms
-		}
-		else {
-			// Scroll up the page
-			$('#masthead.considerate').removeClass('slide-away');
-			sidebar('all');
-		}
-
-		CurrentScroll = NextScroll;  //Updates current scroll position
-
-	});
-
-	// Mobile Nav Controls
-	$('.nav-icon button').on("click", function () {
-		var variant = $(this).attr('data-sidebar');
-		sidebar(variant);
 	})
-	// end Mobile Nav Controls
+
+	// Vaporise headers
+	vaporise(scroll)
+
+	// Directional scroll
+
+	if (scroll > CurrentScroll) {
+		// Scroll down the page
+
+		document.querySelector('#masthead').classList.add('slide-away')
+
+	} else {
+		// Scroll up the page
+		document.querySelector('#masthead').classList.remove('slide-away')
+	}
+
+	CurrentScroll = scroll; //Updates current scroll position
+
+}
+
+// Mobile Nav Controls
+document.querySelectorAll('.nav-icon button').forEach((navIcon) => {
+	navIcon.addEventListener('click', (e) => {
+		let variant = e.currentTarget.getAttribute('data-sidebar')
+		let currentState = document.querySelector(`#sidebar--${variant}`).getAttribute('data-state')
+		if (currentState === 'open') {
+			sidebar('all')
+		} else {
+			sidebar(variant)
+		}
+
+	})
+})
+// end Mobile Nav Controls
 
 
-	// 404 page overlay
-	$('#bsod').on("click", function () {
-		$(this).animate({'opacity': 0}, 500, function () {
-			$(this).remove();
-		});
-	});
-	setTimeout(bsod, 3000);
-	// end 404 page overlay
-});
+// 404 page overlay
+bsod()
+
 
 // Functions on resize
-$(window).resize(debouncer(function (e) {
+window.onresize = function (e) {
 	// onResize operations
-	//document_height();
-	global_functions();
-}));
+	document_height()
+	global_functions()
+}

@@ -1,10 +1,10 @@
 function debouncer(func, timeout) {
 	var timeoutID, timeout = timeout || 200;
-	return function() {
+	return function () {
 		var scope = this,
 			args = arguments;
 		clearTimeout(timeoutID);
-		timeoutID = setTimeout(function() {
+		timeoutID = setTimeout(function () {
 			func.apply(scope, Array.prototype.slice.call(args));
 		}, timeout);
 	}
@@ -12,8 +12,9 @@ function debouncer(func, timeout) {
 
 let numberizePixels = (element) => {
 	let elementHeight = window.getComputedStyle(element).getPropertyValue('height')
-	return ~~(elementHeight.substr(0,(elementHeight.length - 2)))
+	return ~~(elementHeight.substr(0, (elementHeight.length - 2)))
 }
+
 
 function return_to_top() {
 	window.scrollTo(0, numberizePixels(document.querySelector('.hero-full')))
@@ -22,7 +23,7 @@ function return_to_top() {
 
 
 function max_height() {
-	document.querySelectorAll('.max-height').forEach((maxHeight)=>{
+	document.querySelectorAll('.max-height').forEach((maxHeight) => {
 		maxHeight.style.height = browser.height
 	})
 }
@@ -68,44 +69,38 @@ function detectIE() {
 }
 
 function progressive_media() {
-	//@TODO: destroy jQuery
-	$(".hero-full").each(
-		function() {
-			var url = $(this).attr("src");
-			var thumb = $(this).prev();
-			if (detectIE()) {
-				var parent = $(this).parent();
-				$(parent).css('background-image', 'url(' + url + ')');
-				$('.hero-full').addClass('hide');
-			}
-			$(this).load(function() {
-				$(thumb).addClass('hide');
-			}).attr('src', url);
+	document.querySelectorAll('.hero-full').forEach((hero)=>{
+		let full = hero.getAttribute('data-src')
+		let thumb = hero.previousElementSibling
+		if (detectIE()){
+			let parent = hero.parentElement
+			parent.style.backgroundImage = full
+			hero.style.display = 'none'
 		}
-	);
+		hero.addEventListener('load', ()=>{
+			thumb.classList.add('hide')
+		})
+	})
 }
 
-function vaporise() {
-	window.onscroll = function() {
-      let vaporise = document.querySelector('.vaporise .hero__title')
+function vaporise(scroll) {
+	if (document.querySelector('.vaporise')) {
+		if (scroll < browser.height) {
+			let vaporise = document.querySelector('.vaporise .hero__title')
 			let parallax = document.querySelector('.vaporise .hero-full')
-			if (vaporise) {
-				let scroll = window.pageYOffset;
-				let opacity = ((1 - (scroll / 1000)) > 0) ? (1 - (scroll / 1000)) : 0
-				let scale = ((1 + (scroll / 1000)) > 1) ? (1 + (scroll / 1000)) : 1
-				let blur = ((1 + (scroll / 10)) > 1) ? (1 + (scroll / 100)) : 0
-				if (scroll < browser.height) {
-					parallax.style.marginTop = (0 + (scroll / 2)) + "px"
-					vaporise.style.opacity = opacity
-					vaporise.style.transform = `scale(${scale})`
-					vaporise.style.filter = `blur(${blur}px)`
-				}
-			}
+			let opacity = ((1 - (scroll / 1000)) > 0) ? (1 - (scroll / 1000)) : 0
+			let scale = ((1 + (scroll / 1000)) > 1) ? (1 + (scroll / 1000)) : 1
+			let blur = ((1 + (scroll / 10)) > 1) ? (1 + (scroll / 100)) : 0
+			parallax.style.transform = `translate3d(0, ${(0 + (scroll / 2))}px, 0)`
+			vaporise.style.opacity = opacity
+			vaporise.style.transform = `scale(${scale})`
+			vaporise.style.filter = `blur(${blur}px)`
 		}
+	}
 }
 
 function sidebar(variant) {
-	document.querySelectorAll('.sidebar').forEach((sidebar)=>{
+	document.querySelectorAll(`.sidebar:not([id="sidebar--${variant}"])`).forEach((sidebar) => {
 		sidebar.setAttribute('data-state', 'closed')
 	})
 	document.querySelectorAll('#sidebar--' + variant).forEach((thisSidebar) => {
@@ -116,26 +111,28 @@ function sidebar(variant) {
 function bsod() {
 	if (document.querySelector('.error404')) {
 		document.querySelector('#bsod').style.transition = 'opacity ease-in 500ms'
-		document.querySelector('#bsod').style.opacity = 0
-		setTimeout(()=>{
+		setTimeout(() => {
+			document.querySelector('#bsod').style.opacity = 0
+			setTimeout(() => {
 				document.querySelector('#bsod').outerHTML = ''
-		}, 500)
+			}, 1000)
+		}, 2000)
 	}
 }
 
 function global_functions() {
-	screen_size();
-	max_height();
-	persistent_element_heights();
-	if ($(window).scrollTop() > 0) {
-		$('#masthead.fade-in').addClass('open');
+	screen_size()
+	max_height()
+	console.log(elementSize)
+	if (window.pageYOffset > 0) {
+		document.querySelector('#masthead').classList.add('fade-in')
+		document.querySelector('#masthead').classList.add('open')
 	}
-	progressive_media();
-	vaporise();
+	progressive_media()
 
 	// Load hero images _after_ everything else has loaded (including thumbnails)
 	// This greatly improves page loading speeds
-	document.querySelectorAll('.hero-full').forEach((hero)=>{
+	document.querySelectorAll('.hero-full').forEach((hero) => {
 		let src = hero.getAttribute('data-src')
 		hero.setAttribute('src', src)
 	})
