@@ -22,9 +22,11 @@ jQuery(document).ready(function ($) {
 	// Functions on Scroll
 	var CurrentScroll = 0;
 	$(window).on('scroll scrollstart', function () {
-		var scroll = $(window).scrollTop();
+
+		var scroll = window.pageYOffset;
+
 		// log for debug
-		// console.log(screen_height, scroll);
+		//console.log(screen_height, scroll);
 		// Show/hide Masthead
 		if (scroll > (screen_height / 2)) {
 			$('.home #masthead.fade-in').addClass('open');
@@ -40,12 +42,12 @@ jQuery(document).ready(function ($) {
             document.querySelector('.scroll-down').setAttribute('data-state', 'shown')
 		}
 
-		//console.log("doc_height: "+document_height+". \nscreen_height: "+screen_height+". \ndoc - screen: "+(document_height - screen_height)+". scroll: "+scroll);
+		console.log("doc_height: "+document_height+". \nscreen_height: "+screen_height+". \ndoc - screen: "+(document_height - (screen_height * 2))+". scroll: "+scroll);
 
-		if ((scroll > (document_height - (screen_height * 2))) && (document_height > screen_height)) {
-			$('button#return_to_top').addClass('slideout');
+		if (scroll > (document_height - (screen_height * 2))) {
+			document.querySelector('button#return_to_top').setAttribute('data-state', 'is-shown');
 		} else {
-			$('button#return_to_top').removeClass('slideout');
+			document.querySelector('button#return_to_top').setAttribute('data-state', 'not-shown');
 		}
 
 		// Directional scroll

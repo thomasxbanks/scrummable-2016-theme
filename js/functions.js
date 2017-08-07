@@ -86,7 +86,6 @@ function progressive_media() {
 }
 
 function vaporise() {
-	//@TODO: destroy jQuery
 	window.onscroll = function() {
       let vaporise = document.querySelector('.vaporise .hero__title')
 			let parallax = document.querySelector('.vaporise .hero-full')
@@ -102,7 +101,6 @@ function vaporise() {
 					vaporise.style.filter = `blur(${blur}px)`
 				}
 			}
-			// end Hero Parallax - Post
 		}
 }
 

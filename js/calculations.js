@@ -19,7 +19,7 @@ function document_height() {
 }
 
 // What are the browser dimensions?
-let browser = {
+var browser = {
   width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
   height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
 }
