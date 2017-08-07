@@ -88,13 +88,25 @@ wp_mail($email, "404 Alert: " . $blog, $message, "From: $email");
     <img src="<?php echo get_template_directory_uri() . "/img/bsod.jpg"; ?>" alt="Blue screen of death">
 </div>
 <section id="main" class="container" data-role="main" aria-label="Main page content">
+    <?php
+$classes = "post__wrapper--image";
+$classes .= " hero__image--page";
+(!is_mobile()) ? $classes .= " vaporise" : null;
+?>
+<header class="post__header">
+    <section class="hero-image <?php echo $classes; ?>" data-role="hero-image" aria-label="Page Main Image">
+         <img class="hero-full" src="<?php echo get_template_directory_uri() . "/img/moon-moon.jpg"; ?>" alt="Moon Moon, the worst wolf on the internet, collides with another wolf from his pack.">
+        <div class="hero__title--wrapper">
+            <h1 class="hero__title hero__title--page">
+                Good job, Moon Moon!
+            </h1>
+        </div>
+    </section>
+</header>
+
     <article class="page--single page__content page__content--fourohfour" id="post-<?php the_ID(); ?>">
         <div class="page__content">
             <section class="page__content--inner">
-                <img src="<?php echo get_template_directory_uri() . "/img/moon-moon.jpg"; ?>" alt="Moon Moon, the worst wolf on the internet, collides with another wolf from his pack.">
-                <h1>
-                    Good job, Moon Moon!
-                </h1>
                 <p>
                     Something gan aglay but panic ye not!
                 </p>

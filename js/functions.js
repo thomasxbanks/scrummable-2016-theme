@@ -90,7 +90,7 @@ function vaporise() {
 	window.onscroll = function() {
       let vaporise = document.querySelector('.vaporise .hero__title')
 			let parallax = document.querySelector('.vaporise .hero-full')
-			if (vaporise !== undefined) {
+			if (vaporise) {
 				let scroll = window.pageYOffset;
 				let opacity = ((1 - (scroll / 1000)) > 0) ? (1 - (scroll / 1000)) : 0
 				let scale = ((1 + (scroll / 1000)) > 1) ? (1 + (scroll / 1000)) : 1
@@ -116,7 +116,7 @@ function sidebar(variant) {
 }
 
 function bsod() {
-	if (document.querySelector('.error404') !== undefined) {
+	if (document.querySelector('.error404')) {
 		document.querySelector('#bsod').style.transition = 'opacity ease-in 500ms'
 		document.querySelector('#bsod').style.opacity = 0
 		setTimeout(()=>{
