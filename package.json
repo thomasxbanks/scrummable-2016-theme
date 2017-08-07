@@ -4,7 +4,7 @@
   "description": "This is the new staging version of the *Scrummable* blog. Refactored code based on nearnothing instead of _underscores to minimise the code-bloat. Tweaks to layout and code-block behind the scenes to improve accessibility, page load, and general performance. Because perf is all.",
   "main": "index.js",
   "scripts": {
-    "start": "node-sass -w ./style.scss ./style.css & babel ./js --watch --out-file ./js/app.js",
+    "start": "node-sass -w ./style.scss ./style.css & babel ./js --watch --out-file ./app.js",
     "build": "npm run buildcss && echo \"Finished CSS\" && npm run buildjs && echo \"Finished JS\"",
     "buildcss": "node-sass ./style.scss ./style.css --output-style=compressed",
     "buildjs": "babel ./js --out-file ./app.js --compact=true",
