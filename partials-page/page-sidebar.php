@@ -1,5 +1,5 @@
 <aside id="sidebar--nav-primary" class="sidebar" data-role="navigation" aria-label="Primary Navigation">
-    <nav id="nav-primary" class="closed">
+    <nav id="nav-primary" data-state="closed">
         <ul class="list--blocks">
                 <?php wp_list_pages( array( 'title_li' => '' ) ); ?>
             <?php
@@ -20,7 +20,7 @@
     </nav>
 </aside>
 <aside id="sidebar--settings" class="sidebar" data-role="settings" aria-label="Settings">
-    <nav id="nav-settings" class="closed">
+    <nav id="nav-settings" data-state="closed">
         <ul class="list--blocks">
             <li><a href="#">Settings</a></li>
             <li><a href="#">Other Settings</a></li>
@@ -29,7 +29,7 @@
     </nav>
 </aside>
 <aside id="sidebar--search" class="sidebar" data-role="search" aria-label="Search">
-    <nav id="nav-search" class="closed">
+    <nav id="nav-search" data-state="closed">
         <ul class="list--blocks">
             <li><?php get_search_form(); ?></li>
         </ul>

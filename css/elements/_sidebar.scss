@@ -12,7 +12,7 @@ aside.sidebar {
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 	color: $clr_bg-main;
-	&.open {
+		&[data-state="open"] {
 		transform: translate3d(0, 0, 0);
 		-webkit-transform: translate3d(0, 0, 0);
 	}

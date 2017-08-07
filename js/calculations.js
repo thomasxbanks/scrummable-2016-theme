@@ -24,16 +24,6 @@ let browser = {
   height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
 }
 
-function is_at_top() {
-	var panel_offset = $('#page__content_ajax').offset();
-	var panel_left = panel_offset.top;
-	if (panel_left == 0) {
-		return true;
-	} else {
-		return false;
-	}
-}
-
 function persistent_element_heights() {
 	colophon_height = $('#colophon').height();
 	masthead_height = $('#masthead').height();

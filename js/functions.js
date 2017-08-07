@@ -10,30 +10,21 @@ function debouncer(func, timeout) {
 	}
 }
 
-function return_to_top() {
-	var distance = (document_height / screen_height);
-	var content_top = (0 + screen_height - $('#masthead').height());
-	if (distance > 5) {
-		var transition_speed = 300;
-	} else {
-		var transition_speed = 800;
-	}
-	$("html body").animate({
-		scrollTop: (content_top)
-	}, transition_speed);
-	return false;
-	// TODO: fix nav bar hide on skip-link...
+let numberizePixels = (element) => {
+	let elementHeight = window.getComputedStyle(element).getPropertyValue('height')
+	return ~~(elementHeight.substr(0,(elementHeight.length - 2)))
 }
 
-function nudge() {
-	$("html, body").animate({
-		scrollTop: screen_height
-	}, transition_speed_slowest);
-	return false;
+function return_to_top() {
+	window.scrollTo(0, numberizePixels(document.querySelector('.hero-full')))
 }
+
+
 
 function max_height() {
-	$('.max-height').css('height', screen_height);
+	document.querySelectorAll('.max-height').forEach((maxHeight)=>{
+		maxHeight.style.height = browser.height
+	})
 }
 
 function detectIE() {
@@ -77,7 +68,7 @@ function detectIE() {
 }
 
 function progressive_media() {
-
+	//@TODO: destroy jQuery
 	$(".hero-full").each(
 		function() {
 			var url = $(this).attr("src");
@@ -95,38 +86,43 @@ function progressive_media() {
 }
 
 function vaporise() {
-	if ($("body").length) {
-		$(window).scroll(function() {
+	//@TODO: destroy jQuery
+	window.onscroll = function() {
       let vaporise = document.querySelector('.vaporise .hero__title')
 			let parallax = document.querySelector('.vaporise .hero-full')
-			let scroll = window.pageYOffset;
-			let opacity = ((1 - (scroll / 1000)) > 0) ? (1 - (scroll / 1000)) : 0
-			let scale = ((1 + (scroll / 1000)) > 1) ? (1 + (scroll / 1000)) : 1
-			let blur = ((1 + (scroll / 10)) > 1) ? (1 + (scroll / 100)) : 0
-			if (scroll < browser.height) {
-				parallax.style.marginTop = (0 + (scroll / 2)) + "px"
-				vaporise.style.opacity = opacity
-				vaporise.style.transform = `scale(${scale})`
-				vaporise.style.filter = `blur(${blur}px)`
+			if (vaporise !== undefined) {
+				let scroll = window.pageYOffset;
+				let opacity = ((1 - (scroll / 1000)) > 0) ? (1 - (scroll / 1000)) : 0
+				let scale = ((1 + (scroll / 1000)) > 1) ? (1 + (scroll / 1000)) : 1
+				let blur = ((1 + (scroll / 10)) > 1) ? (1 + (scroll / 100)) : 0
+				if (scroll < browser.height) {
+					parallax.style.marginTop = (0 + (scroll / 2)) + "px"
+					vaporise.style.opacity = opacity
+					vaporise.style.transform = `scale(${scale})`
+					vaporise.style.filter = `blur(${blur}px)`
+				}
 			}
 			// end Hero Parallax - Post
-		})
-	}
+		}
 }
 
 function sidebar(variant) {
-	var this_sidebar = "#sidebar--" + variant;
-	var not_this_sidebar = '.sidebar:not(' + this_sidebar + ')';
-	$(not_this_sidebar).removeClass('open');
-	$(this_sidebar).toggleClass('open');
+	document.querySelectorAll('.sidebar').forEach((sidebar)=>{
+		sidebar.setAttribute('data-state', 'closed')
+	})
+	document.querySelectorAll('#sidebar--' + variant).forEach((thisSidebar) => {
+		thisSidebar.setAttribute('data-state', 'open')
+	})
 }
 
 function bsod() {
-	$('#bsod').animate({
-		'opacity': 0
-	}, 500, function() {
-		$(this).remove();
-	});
+	if (document.querySelector('.error404') !== undefined) {
+		document.querySelector('#bsod').style.transition = 'opacity ease-in 500ms'
+		document.querySelector('#bsod').style.opacity = 0
+		setTimeout(()=>{
+				document.querySelector('#bsod').outerHTML = ''
+		}, 500)
+	}
 }
 
 function global_functions() {
@@ -138,8 +134,13 @@ function global_functions() {
 	}
 	progressive_media();
 	vaporise();
+
+	// Load hero images _after_ everything else has loaded (including thumbnails)
+	// This greatly improves page loading speeds
 	document.querySelectorAll('.hero-full').forEach((hero)=>{
 		let src = hero.getAttribute('data-src')
 		hero.setAttribute('src', src)
 	})
+	// END Load Hero images later
+
 };

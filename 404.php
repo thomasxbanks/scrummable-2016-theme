@@ -102,7 +102,7 @@ wp_mail($email, "404 Alert: " . $blog, $message, "From: $email");
                     The dev team have used some kind of code-wizardy to report this mistake to someone who can actually factually fix it.
                 </p>
                 <p>
-                    If you're not to annoyed with us and want to carry on using the site, you can still use the handy menu and/or search bar to look around.
+                    If you're not too annoyed with us and want to carry on using the site, you can still use the handy menu and/or search bar to look around.
                 </p>
             </section>
         </div>
