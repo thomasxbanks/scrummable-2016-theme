@@ -5,6 +5,7 @@ footer#colophon {
 	width: 100%;
 	padding: $baseline;
   #copyright small {
+		font-family: $font_face-main;
     font-size: $font_size-xsm;
     color: $clr_grey-mid;
   }

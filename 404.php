@@ -93,18 +93,19 @@ $classes = "post__wrapper--image";
 $classes .= " hero__image--page";
 (!is_mobile()) ? $classes .= " vaporise" : null;
 ?>
-<header class="post__header">
-    <section class="hero-image <?php echo $classes; ?>" data-role="hero-image" aria-label="Page Main Image">
-         <img class="hero-full" src="<?php echo get_template_directory_uri() . "/img/moon-moon.jpg"; ?>" alt="Moon Moon, the worst wolf on the internet, collides with another wolf from his pack.">
-        <div class="hero__title--wrapper">
-            <h1 class="hero__title hero__title--page">
-                Good job, Moon Moon!
-            </h1>
-        </div>
-    </section>
-</header>
+
 
     <article class="page--single page__content page__content--fourohfour" id="post-<?php the_ID(); ?>">
+        <header class="post__header">
+            <section class="hero-image <?php echo $classes; ?>" data-role="hero-image" aria-label="Page Main Image">
+                <img class="hero-full" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="<?php echo get_template_directory_uri() . "/img/moon-moon.jpg"; ?>" alt="Moon Moon, the worst wolf on the internet, collides with another wolf from his pack.">
+                <div class="hero__title--wrapper">
+                    <h1 class="hero__title hero__title--page">
+                        Good job, Moon Moon!
+                    </h1>
+                </div>
+            </section>
+        </header>
         <div class="page__content">
             <section class="page__content--inner">
                 <p>
