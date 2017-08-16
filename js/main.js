@@ -153,7 +153,7 @@ function global_functions() {
 
 // onLoad operations
 window.onload = () => {
-	
+
 	global_functions()
 	// Load hero images _after_ everything else has loaded (including thumbnails)
 	// This greatly improves page loading speeds
@@ -163,15 +163,19 @@ window.onload = () => {
 		let src = heroImages[i].getAttribute('data-src')
 		let thumb = heroImages[i].previousElementSibling
 		if (detectIE()) {
-			console.log(heroImages[i].parentElement)
 			heroImages[i].parentElement.style.backgroundImage = 'url("' + src + '")'
+			thumb.classList.add('hide')
 		} else {
 			heroImages[i].setAttribute('src', src)
+
+			console.log(i, thumb, heroImages[i])
+			heroImages[i].onload = () => {
+				thumb.classList.add('hide')
+			}
 		}
-		heroImages[i].addEventListener('load', () => {
-			thumb.classList.add('hide')
-		})
+
 	}
+
 	// END Load Hero images later
 }
 

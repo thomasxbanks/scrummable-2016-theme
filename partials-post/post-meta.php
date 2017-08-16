@@ -27,10 +27,5 @@
                 (is_single()) ? "<li class='write_comments'><a href=\"#comments\" title='Leave a comment'>Leave a comment</a></li>" : null;
             } ?>
         <?php } ?>
-        <?php if (current_user_can('edit_post')) { ?>
-            <li class="edit"><a href="<?php echo get_edit_post_link(); ?>">Edit post</a></li>
-            <li class="twitter"><a href="#">Share post on Twitter</a></li>
-            <li class="instagram"><a href="#">Share post on Instagram</a></li>
-        <?php } ?>
     </ul>
 </div>
