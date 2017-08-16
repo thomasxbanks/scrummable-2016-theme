@@ -19,12 +19,18 @@ get_template_part('php/functions', 'post');
 get_template_part('php/functions', 'admin');
 get_template_part('php/functions', 'editor-style');
 
+function myphpinformation_scripts()
+{
+    if (!is_admin()) {
+        wp_deregister_script('jquery');
+    }
+}
+
+add_action( 'wp_enqueue_scripts', 'myphpinformation_scripts' );
 
 function scrummable_scripts()
 {
     wp_enqueue_style('scrummable-style', get_stylesheet_uri());
-
-    wp_deregister_script('jquery');
 
     //wp_enqueue_script('hosted', '//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js');
 
@@ -33,7 +39,6 @@ function scrummable_scripts()
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
-
 }
 
 add_action('wp_enqueue_scripts', 'scrummable_scripts');
@@ -95,7 +100,7 @@ function disable_emojis_remove_dns_prefetch($urls, $relation_type)
 {
     if ('dns-prefetch' == $relation_type) {
         /** This filter is documented in wp-includes/formatting.php */
-$emoji_svg_url = apply_filters('emoji_svg_url', 'https://s.w.org/images/core/emoji/2/svg/');
+        $emoji_svg_url = apply_filters('emoji_svg_url', 'https://s.w.org/images/core/emoji/2/svg/');
 
         $urls = array_diff($urls, array( $emoji_svg_url ));
     }
@@ -116,7 +121,8 @@ add_filter('the_excerpt_rss', 'wcs_post_thumbnails_in_feeds');
 add_filter('the_content_feed', 'wcs_post_thumbnails_in_feeds');
 
 
-function my_deregister_scripts(){
-  wp_deregister_script( 'wp-embed' );
+function my_deregister_scripts()
+{
+    wp_deregister_script( 'wp-embed' );
 }
 add_action( 'wp_footer', 'my_deregister_scripts' );
