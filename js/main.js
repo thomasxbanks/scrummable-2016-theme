@@ -158,7 +158,6 @@ window.onload = () => {
 	// Load hero images _after_ everything else has loaded (including thumbnails)
 	// This greatly improves page loading speeds
 	let heroImages = document.querySelectorAll('.hero-full')
-	console.log('download images now')
 	for (var i = 0; i < heroImages.length; i++) {
 		let src = heroImages[i].getAttribute('data-src')
 		let thumb = heroImages[i].previousElementSibling
@@ -167,13 +166,10 @@ window.onload = () => {
 			thumb.classList.add('hide')
 		} else {
 			heroImages[i].setAttribute('src', src)
-
-			console.log(i, thumb, heroImages[i])
 			heroImages[i].onload = () => {
 				thumb.classList.add('hide')
 			}
 		}
-
 	}
 
 	// END Load Hero images later
