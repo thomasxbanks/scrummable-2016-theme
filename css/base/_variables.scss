@@ -21,9 +21,9 @@ $clr_bg-main: $clr_white;
 $clr_shadow: $clr_black;
 
 // Fonts
-@import url( 'https://fonts.googleapis.com/css?family=Comfortaa:300|Overpass:300' );
+//@import url( '' );
 $font_face-main: "Overpass", Arial, "Helvetica Neue", Helvetica, sans-serif;
-$font_face-accent: "Comfortaa", "Times New Roman", Times, Baskerville, Georgia, serif;
+$font_face-accent: "Comfortaa", Arial, "Helvetica Neue", Helvetica, sans-serif;
 
 $font_clr-main: $clr_grey-dark;
 
