@@ -36,7 +36,7 @@ header.post__header {
 		font-family: $font_face-accent;
 		color: $clr_bg-main;
 		font-size: 3rem;
-		text-shadow: 0 0 $baseline rgba($clr_shadow, $opacity-solid);
+		text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 		text-decoration: none;
 	}
 
@@ -45,7 +45,7 @@ header.post__header {
 		max-width: 400px;
 		margin: $baseline auto;
 		color: $clr_bg-main;
-		text-shadow: 0 0 ($baseline / 2) rgba($clr_shadow, $opacity-solid);
+		text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 		text-decoration: none;
 	}
 	@media screen and (max-width: 567px) {
