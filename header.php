@@ -29,6 +29,7 @@ if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip')) {
 } ?>
 	<?php wp_head(); ?>
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa:300|Overpass:300" rel="stylesheet">
+  <?php get_template_part('partials-page/page', 'meta'); ?>
 </head>
 <body <?php body_class(); ?>">
 <?php get_template_part('partials-page/page', 'masthead'); ?>
