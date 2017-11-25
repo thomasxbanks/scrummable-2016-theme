@@ -232,19 +232,19 @@ window.onload = () => {
 	// Load hero images _after_ everything else has loaded (including thumbnails)
 	// This greatly improves page loading speeds
 	let heroImages = document.querySelectorAll('.hero-full')
-	for (var i = 0; i < heroImages.length; i++) {
-		let src = heroImages[i].getAttribute('data-src')
-		let thumb = heroImages[i].previousElementSibling
+	heroImages.forEach((heroImage)=>{
+		let src = heroImage.getAttribute('data-src')
+		let thumb = heroImage.previousElementSibling
 		if (detectIE()) {
-			heroImages[i].parentElement.style.backgroundImage = 'url("' + src + '")'
+			heroImage.parentElement.style.backgroundImage = 'url("' + src + '")'
 			thumb.classList.add('hide')
 		} else {
-			heroImages[i].setAttribute('src', src)
-			heroImages[i].onload = () => {
+			heroImage.setAttribute('src', src)
+			heroImage.onload = () => {
 				thumb.classList.add('hide')
 			}
 		}
-	}
+	})
 
 	// END Load Hero images later
 }
