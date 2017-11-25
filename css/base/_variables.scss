@@ -5,15 +5,15 @@ $b: $bl;
 
 // Colors
 $clr_brand: #a1213d;
-$clr_black: #121316;
+$clr_black: black;
 $clr_grey-dark: #292c32;
-$clr_grey-mid: #363a41;
-$clr_grey-light: #edeff0;
-$clr_white: #fffffe;
+$clr_grey-mid: gray;
+$clr_grey-light: whitesmoke;
+$clr_white: white;
 
-$clr_error: hsb(0, 100, 50);
-$clr_success: hsb(120, 100, 50);
-$clr_warning: hsb(30, 100, 50);
+$clr_error: red;
+$clr_success: green;
+$clr_warning: tomato;
 
 $clr_bg-accent: $clr_grey-light;
 $clr_bg-main: $clr_white;
