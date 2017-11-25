@@ -44,13 +44,21 @@ function my_save_extra_profile_fields( $user_id ) {
  * Author URI: 		http://www.jeroensormani.com/
  */
 
- function load_custom_wp_admin_script() {
-         wp_register_script( 'custom_wp_admin_script', get_template_directory_uri() . '/php/admin-script.js', false, '1.0.0' );
-         wp_enqueue_script( 'custom_wp_admin_script' );
- }
 
- add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_script' );
 
+function my_admin_enqueue($hook_suffix) {
+    echo $hook_suffix;
+    echo '.....';
+    if($hook_suffix == 'settings_page_media-selector') {
+        wp_register_script( 'custom_wp_admin_script', get_template_directory_uri() . '/php/admin-script.js', false, '1.0.0' );
+        wp_enqueue_script( 'custom_wp_admin_script' );
+
+    } else {
+        echo 'not the page';
+    }
+}
+
+add_action('admin_enqueue_scripts', 'my_admin_enqueue');
 
 add_action( 'admin_menu', 'register_media_selector_settings_page' );
 
