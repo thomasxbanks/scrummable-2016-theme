@@ -125,8 +125,7 @@ let return_to_top = () => {
 	scrollIt(
 		numberizePixels(document.querySelector('.hero-full')),
 		300,
-		'easeOutQuad',
-		() => console.log(`Just finished scrolling to ${window.pageYOffset}px`)
+		'easeOutQuad'
 	)
 }
 
@@ -359,8 +358,7 @@ anchors.forEach((anchor)=>{
 		scrollIt(
 			document.querySelector(e.currentTarget.getAttribute('href').split('#')[1]),
 			300,
-			'easeOutQuad',
-			() => console.log(`Just finished scrolling to ${window.pageYOffset}px`)
+			'easeOutQuad'
 		)
 	})
 })
