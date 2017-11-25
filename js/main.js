@@ -1,15 +1,5 @@
-const screen_width = window.innerWidth ||
-	document.documentElement.clientWidth ||
-	document.body.clientWidth;
-
-const screen_height = window.innerHeight ||
-	document.documentElement.clientHeight ||
-	document.body.clientHeight;
-
-
-
 var body = document.body,
-	html = document.documentElement;
+	  html = document.documentElement
 
 let document_height = () => {
 	return Math.max(body.scrollHeight, body.offsetHeight,
@@ -52,7 +42,9 @@ let numberizePixels = (element) => {
 
 
 let return_to_top = () => {
-	window.scrollTo(0, numberizePixels(document.querySelector('.hero-full')))
+	scrollIt(
+		numberizePixels(document.querySelector('.hero-full'))
+	)
 }
 
 let max_height = () => {
@@ -192,15 +184,15 @@ window.onscroll = function () {
 	var scroll = window.pageYOffset;
 
 	// log for debug
-	//console.log(screen_height, scroll);
+	//console.log(browser.height, scroll);
 	// Show/hide Masthead
-	if (scroll > (screen_height / 2)) {
+	if (scroll > (browser.height / 2)) {
 		document.querySelector('#masthead').classList.add('open')
 	} else {
 		document.querySelector('#masthead').classList.remove('open')
 	}
 
-	if (scroll > screen_height) {
+	if (scroll > browser.height) {
 		document.querySelector('.scroll-up').setAttribute('data-state', 'shown')
 		document.querySelector('.scroll-down').setAttribute('data-state', 'hidden')
 	} else {
@@ -208,9 +200,9 @@ window.onscroll = function () {
 		document.querySelector('.scroll-down').setAttribute('data-state', 'shown')
 	}
 
-	//console.log("doc_height: "+document_height+". \nscreen_height: "+screen_height+". \ndoc - screen: "+(document_height - (screen_height * 2))+". scroll: "+scroll)
+	//console.log("doc_height: "+document_height+". \browser.height: "+browser.height+". \ndoc - screen: "+(document_height - (browser.height * 2))+". scroll: "+scroll)
 
-	if (scroll > (document_height - (screen_height * 2))) {
+	if (scroll > (document_height - (browser.height * 2))) {
 		document.querySelector('button#return_to_top').setAttribute('data-state', 'is-shown')
 	} else {
 		document.querySelector('button#return_to_top').setAttribute('data-state', 'not-shown')
@@ -268,3 +260,15 @@ window.onresize = function (e) {
 	// onResize operations
 	global_functions()
 }
+
+let anchors = document.querySelectorAll('a[href^="#"]')
+anchors.forEach((anchor)=>{
+	anchor.addEventListener('click', (e) => {
+		scrollIt(
+			document.querySelector(e.currentTarget.getAttribute('href').split('#')[1]),
+			300,
+			'easeOutQuad',
+			() => console.log(`Just finished scrolling to ${window.pageYOffset}px`)
+		)
+	})
+})
