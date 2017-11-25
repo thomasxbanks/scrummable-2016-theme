@@ -19,19 +19,3 @@
         </ul>
     </nav>
 </aside>
-<aside id="sidebar--settings" class="sidebar" data-role="settings" aria-label="Settings">
-    <nav id="nav-settings" data-state="closed">
-        <ul class="list--blocks">
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Other Settings</a></li>
-            <li><a href="#">More Settings</a></li>
-        </ul>
-    </nav>
-</aside>
-<aside id="sidebar--search" class="sidebar" data-role="search" aria-label="Search">
-    <nav id="nav-search" data-state="closed">
-        <ul class="list--blocks">
-            <li><?php get_search_form(); ?></li>
-        </ul>
-    </nav>
-</aside>
