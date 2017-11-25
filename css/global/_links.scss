@@ -37,3 +37,18 @@
 		}
 	}
 }
+
+.icon-twitter-follow {
+	display: inline-block;
+	width: 1rem;
+	margin: 0 0.25rem;
+	vertical-align: middle;
+}
+.link-twitter-follow {
+	display: block;
+	text-decoration: none;
+	font-size: $font_size-xsm;
+	color: $clr_white;
+	line-height: 13px;
+	margin-top: 2rem;
+}
