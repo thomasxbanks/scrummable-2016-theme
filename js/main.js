@@ -200,9 +200,16 @@ window.onscroll = function () {
 		document.querySelector('.scroll-down').setAttribute('data-state', 'shown')
 	}
 
+// 	const measurements = () => {
+// return `document_height: ${document_height()}\n
+// scroll: ${scroll}\n
+// browser.height: ${browser.height}`
+// 	}
+	// console.log(measurements())
+
 	//console.log("doc_height: "+document_height+". \browser.height: "+browser.height+". \ndoc - screen: "+(document_height - (browser.height * 2))+". scroll: "+scroll)
 
-	if (scroll > (document_height - (browser.height * 2))) {
+	if (scroll > (document_height() - (browser.height * 2))) {
 		document.querySelector('button#return_to_top').setAttribute('data-state', 'is-shown')
 	} else {
 		document.querySelector('button#return_to_top').setAttribute('data-state', 'not-shown')
