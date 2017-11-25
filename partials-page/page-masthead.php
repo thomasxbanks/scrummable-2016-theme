@@ -1,11 +1,14 @@
-<?php if (is_front_page()) {
-    $classes_masthead = "fade-in";
+<?php
+$classes_masthead = "header--page";
+
+if (is_front_page()) {
+    $classes_masthead .= " fade-in";
+    $classes_masthead .= " home";
 } else {
-    $classes_masthead = "open";
     $classes_masthead .= " considerate";
 } ?>
 
-<header id="masthead" class="header--page <?php echo $classes_masthead; ?>">
+<header id="masthead" class="<?php echo $classes_masthead; ?>">
     <section id="branding">
         <div id="site-title">
             <h1 class="company_logo">

@@ -9,27 +9,17 @@ header#masthead {
 	transition: $ease-main $speed-fast;
 	transform: translateY(0);
 	-webkit-transform: translateY(0);
+	background: $clr_black;
+	&.home {
+		background: none;
+	}
 	&.open {
-		background-color: $clr_black;
-		h1.company_logo {
-			opacity: 1;
-			transform: translateY(0);
-			-webkit-transform: translateY(0);
-		}
+		background: $clr_black;
 	}
-	&.considerate {
-		h1.company_logo {
-			@include animation(pulse 0.25s 1);
-		}
-	}
+
 	&.slide-away {
 		transform: translateY(-100%);
 		-webkit-transform: translateY(-100%);
-		h1.company_logo {
-			opacity: 0;
-			transform: translateY(-100%);
-			-webkit-transform: translateY(-100%);
-		}
 	}
 	#site-title {
 		display: block;
@@ -37,42 +27,55 @@ header#masthead {
 		position: relative;
 		z-index: 130;
 	}
-	h1.company_logo {
+}
+
+h1.company_logo {
+	font-family: $font_face-accent;
+	opacity: 1;
+	transform: translateY(0);
+	-webkit-transform: translateY(0);
+	transition: $ease-main $speed-fast;
+	transform: scale(0.8);
+	-webkit-transform: scale(0.8);
+	a {
+		&:before {
+			content: "";
+			display: inline-block;
+			height: ($baseline * 2);
+			width: ($baseline * 1.5);
+			vertical-align: middle;
+			background-image: url('img/cupcake--white.png');
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			margin: -($baseline / 2) ($baseline / 2) 0 0;
+		}
+		&:hover {
+			&:before {
+				@include animation(pulse 0.25s 1);
+			}
+		}
+		display: block;
+		padding: $baseline 0 $baseline $baseline;
 		font-family: $font_face-accent;
-		opacity: 0;
+		font-size: $font_size-std;
+		text-transform: lowercase;
+		text-decoration: none;
+		line-height: $font_size-med;
+		color: $clr_bg-main;
+		border: none;
+	}
+	.home & {
 		transform: translateY(-100%);
 		-webkit-transform: translateY(-100%);
-		transition: $ease-main $speed-fast;
-		transform: scale(0.8);
-		-webkit-transform: scale(0.8);
-		a {
-			&:before {
-				content: "";
-				display: inline-block;
-				height: ($baseline * 2);
-				width: ($baseline * 1.5);
-				vertical-align: middle;
-				background-image: url('img/cupcake--white.png');
-				background-position: center center;
-				background-repeat: no-repeat;
-				background-size: cover;
-				margin: -($baseline / 2) ($baseline / 2) 0 0;
-			}
-			&:hover {
-				&:before {
-					@include animation(pulse 0.25s 1);
-				}
-			}
-			display: block;
-			padding: $baseline 0 $baseline $baseline;
-			font-family: $font_face-accent;
-			font-size: $font_size-std;
-			text-transform: lowercase;
-			text-decoration: none;
-			line-height: $font_size-med;
-			color: $clr_bg-main;
-			border: none;
-		}
+	}
+	.open & {
+		opacity: 1;
+		transform: translateY(0);
+		-webkit-transform: translateY(0);
+	}
+	.considerate & {
+		@include animation(pulse 0.25s 1);
 	}
 }
 
