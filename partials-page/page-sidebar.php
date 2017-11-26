@@ -1,5 +1,5 @@
 <aside id="sidebar--nav-primary" class="sidebar" data-role="navigation" aria-label="Primary Navigation">
-    <nav id="nav-primary" data-state="closed">
+    <nav id="nav-primary" class="central-column" data-state="closed">
         <ul class="list--blocks">
                 <?php wp_list_pages( array( 'title_li' => '' ) ); ?>
             <?php
