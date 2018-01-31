@@ -1,3 +1,8 @@
+<meta name="description" content="<?php echo (is_single()) ? paragraph_excerpt(get_the_content()) : bloginfo('description'); ?>">
+<meta name="keywords" content="<?php $categories = get_categories(array('orderby' => 'name','order' => 'ASC'));foreach ($categories as $category) {echo esc_html($category->name) . ' | ';} ?>">
+<meta name="author" content="<?php echo (is_single()) ? get_the_author_meta('display_name') : 'Scrummable'; ?>">
+
+
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="<?php echo (get_the_author_meta('twitter')) ? get_the_author_meta('twitter') : '@scrummable'; ?>">
 <meta name="twitter:site" content="<?php echo (get_the_author_meta('twitter')) ? get_the_author_meta('twitter') : '@scrummable'; ?>">
