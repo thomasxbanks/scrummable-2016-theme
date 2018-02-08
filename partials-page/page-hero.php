@@ -29,3 +29,4 @@ $twitter_icon = "<i class='icon-twitter-follow'><svg xmlns:rdf=\"http://www.w3.o
         </div>
     </section>
 </header>
+<span id="content"></span>

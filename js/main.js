@@ -25,7 +25,7 @@ let elementSize = {
 // https://pawelgrzybek.com/page-scroll-in-vanilla-javascript/
 
 function scrollIt(destination, duration = 200, easing = 'linear', callback) {
-
+console.log(arguments)
 	const easings = {
 		linear(t) {
 			return t;
@@ -122,8 +122,8 @@ let numberizePixels = (element) => {
 
 
 let return_to_top = () => {
-	scrollIt(
-		numberizePixels(document.querySelector('.hero-full')),
+scrollIt(
+		numberizePixels(document.querySelector('.hero-image')),
 		300,
 		'easeOutQuad'
 	)
@@ -324,9 +324,10 @@ window.onscroll = function () {
 }
 
 // Mobile Nav Controls
-let navButtons = document.querySelectorAll('.nav-icon button')
+let navButtons = document.querySelectorAll('.nav-icon .button')
 navButtons.forEach((navButton)=>{
 	navButton.addEventListener('click', (e) => {
+		console.log(e.currentTarget)
 		let variant = e.currentTarget.getAttribute('data-sidebar')
 		if (variant !== 'skip-link'){
 			let currentState = document.querySelector(`#sidebar--${variant}`).getAttribute('data-state')
@@ -351,14 +352,3 @@ window.onresize = function (e) {
 	// onResize operations
 	global_functions()
 }
-
-let anchors = document.querySelectorAll('a[href^="#"]')
-anchors.forEach((anchor)=>{
-	anchor.addEventListener('click', (e) => {
-		scrollIt(
-			document.querySelector(e.currentTarget.getAttribute('href').split('#')[1]),
-			300,
-			'easeOutQuad'
-		)
-	})
-})

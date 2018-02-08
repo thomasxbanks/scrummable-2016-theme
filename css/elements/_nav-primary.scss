@@ -1,40 +1,36 @@
 // Global Navigation
-
 ul#nav-icon__wrapper {
 	float: right;
 	position: relative;
 	z-index: 120;
 	padding-top: 2px;
-
 	li {
 		margin-right: 0;
-
-		button {
+		float: left;
+		button, a {
+			display: block;
 			background: none;
 			border: none !important;
-			color: $clr_bg-accent;
 			font-size: $font_size-std !important;
 			padding: $baseline ($baseline / 2);
 			line-height: $font_size-med;
 			margin-top: 4px;
-
 			&:hover {
-				background: none;
-				color: lighten($clr_bg-accent, 100%);
+				animation: pulse 1 $speed-std;
 			}
-            .scroll {
-                &[data-state="shown"] {
-                    display: block;
-                }
-                &[data-state="hidden"] {
-                    display: none;
-                }
-            }
+			.scroll {
+				&[data-state="shown"] {
+					display: block;
+				}
+				&[data-state="hidden"] {
+					display: none;
+				}
+			}
 		}
 	}
 }
-// Sidebar navigation lists
 
+// Sidebar navigation lists
 aside.sidebar {
 	ul.list--blocks {
 		padding: 0;
@@ -49,7 +45,6 @@ aside.sidebar {
 				margin: 0.5rem;
 				width: calc(33.33% - 1rem);
 			}
-			
 			a {
 				display: block;
 				width: 100%;
@@ -59,7 +54,6 @@ aside.sidebar {
 				text-decoration: none;
 				padding: $baseline;
 				transition: box-shadow $ease-main $speed-fast;
-
 				&:hover {
 					box-shadow: inset 0 -2px $clr_bg-main, 0 1px $clr_bg-main;
 				}
