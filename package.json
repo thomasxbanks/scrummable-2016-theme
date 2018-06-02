@@ -9,7 +9,7 @@
     "watchjs": "babel ./js --watch --out-file ./app.js",
     "build": "npm run buildcss && echo \"Finished CSS\" && npm run buildjs && echo \"Finished JS\"",
     "buildcss": "node-sass ./style.scss ./style.css --output-style=compressed",
-    "buildjs": "eslint ./js/main.js && babel ./js --out-file ./app.js --compact=true --presets=es2015 --no-comments",
+    "buildjs": "babel ./js --out-file ./app.js --compact=true --presets=es2015 --no-comments",
     "test": "echo \"YOLO\" && exit 0"
   },
   "repository": {
