@@ -1,5 +1,4 @@
 // Masthead
-
 header#masthead {
 	position: fixed;
 	top: 0;
@@ -16,7 +15,6 @@ header#masthead {
 	&.open {
 		background: $clr_black;
 	}
-
 	&.slide-away {
 		transform: translateY(-100%);
 		-webkit-transform: translateY(-100%);
@@ -29,7 +27,8 @@ header#masthead {
 	}
 }
 
-h1.company_logo {
+.company_logo {
+	display: block;
 	font-family: $font_face-accent;
 	opacity: 1;
 	transform: translateY(0);

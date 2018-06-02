@@ -754,7 +754,8 @@ header#masthead {
     position: relative;
     z-index: 130; }
 
-h1.company_logo {
+.company_logo {
+  display: block;
   font-family: "Comfortaa", Arial, "Helvetica Neue", Helvetica, sans-serif;
   opacity: 1;
   transform: translateY(0);
@@ -762,7 +763,7 @@ h1.company_logo {
   transition: cubic-bezier(0.64, 0.22, 0.69, 0.98) 250ms;
   transform: scale(0.8);
   -webkit-transform: scale(0.8); }
-  h1.company_logo a {
+  .company_logo a {
     display: block;
     padding: 1rem 0 1rem 1rem;
     font-family: "Comfortaa", Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -772,7 +773,7 @@ h1.company_logo {
     line-height: 1.3rem;
     color: white;
     border: none; }
-    h1.company_logo a:before {
+    .company_logo a:before {
       content: "";
       display: inline-block;
       height: 2rem;
@@ -783,20 +784,20 @@ h1.company_logo {
       background-repeat: no-repeat;
       background-size: cover;
       margin: -0.5rem 0.5rem 0 0; }
-    h1.company_logo a:hover:before {
+    .company_logo a:hover:before {
       -webkit-animation: pulse 0.25s 1;
       -moz-animation: pulse 0.25s 1;
       -ms-animation: pulse 0.25s 1;
       -o-animation: pulse 0.25s 1;
       animation: pulse 0.25s 1; }
-  .home h1.company_logo {
+  .home .company_logo {
     transform: translateY(-100%);
     -webkit-transform: translateY(-100%); }
-  .open h1.company_logo {
+  .open .company_logo {
     opacity: 1;
     transform: translateY(0);
     -webkit-transform: translateY(0); }
-  .considerate h1.company_logo {
+  .considerate .company_logo {
     -webkit-animation: pulse 0.25s 1;
     -moz-animation: pulse 0.25s 1;
     -ms-animation: pulse 0.25s 1;
