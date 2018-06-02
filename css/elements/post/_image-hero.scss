@@ -12,7 +12,6 @@ header.post__header {
 	background-position: center center;
 	background-repeat: no-repeat;
 	width: 100%;
-
 	.hero__title--wrapper {
 		position: relative;
 		z-index: 100;
@@ -24,7 +23,6 @@ header.post__header {
 		padding: 0;
 		@include linear-gradient(rgba($clr_shadow, $opacity-transparent), rgba($clr_shadow, $opacity-standard));
 	}
-
 	h1 {
 		max-width: 800px;
 		margin: 0 auto;
@@ -36,16 +34,15 @@ header.post__header {
 		font-family: $font_face-accent;
 		color: $clr_bg-main;
 		font-size: 3rem;
-		text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+		text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
 		text-decoration: none;
 	}
-
 	p {
 		display: block;
 		max-width: 400px;
 		margin: $baseline auto;
 		color: $clr_bg-main;
-		text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+		text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
 		text-decoration: none;
 	}
 	@media screen and (max-width: 567px) {
@@ -68,7 +65,6 @@ header.post__header {
 			}
 		}
 	}
-
 	.hero-image {
 		height: 400px;
 	}
@@ -116,10 +112,8 @@ header.post__header {
 		text-align: center;
 		vertical-align: middle;
 	}
-
 	h1 {
 		text-align: center;
-
 		&:before {
 			content: "";
 			display: block;
@@ -132,20 +126,17 @@ header.post__header {
 			background-size: cover;
 			margin: $baseline auto;
 		}
-
 		&:hover {
 			&:before {
 				@include animation(pulse 0.25s 1);
 			}
 		}
 	}
-
 	p {
 		a {
 			color: $clr_bg-main;
 			border: none;
 			font-size: $font_size-lrg;
-
 			&:hover {
 				color: $clr_bg-main;
 			}

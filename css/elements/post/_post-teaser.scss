@@ -4,26 +4,23 @@
 	background: $clr_white;
 	box-shadow: -1px -1px 0 rgba($clr_black, 0.1), 1px 1px 0 rgba($clr_black, 0.1);
 	position: relative;
-
 	.inner {
 		padding: 2rem;
 		text-align: left;
 	}
-
 	small {
 		color: $clr_grey-mid;
 		display: block;
 		margin: 1rem 0;
 	}
-
 	.hero__title--post {
 		font-size: $font_size-lrg;
 		line-height: $lh;
 		padding: 2rem;
 	}
-
 	p {
 		display: block;
+		line-height: $lh;
 		padding: 0.5rem 0;
 	}
 }

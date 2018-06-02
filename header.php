@@ -26,7 +26,7 @@ if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip')) {
 		wp_enqueue_script('comment-reply');
 	} ?>
 	<?php wp_head(); ?>
-	<link href="https://fonts.googleapis.com/css?family=Comfortaa:300|Overpass:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa:300" rel="stylesheet">
   <?php get_template_part('partials-page/page', 'meta'); ?>
 </head>
 <body <?php body_class(); ?>">

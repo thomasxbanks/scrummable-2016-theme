@@ -1,10 +1,8 @@
 article.post-single {
 	width: 100%;
-
 	.inner {
 		@extend .central-column;
 	}
-
 	.post__content {
 		max-width: calc(800px - 2rem);
 		display: block;
@@ -16,28 +14,22 @@ article.post-single {
 		padding: 2rem;
 		line-height: $lh;
 		text-align: left;
-
 		ol,
 		ul {
 			padding: 0 0 0 1.3rem;
 			margin: 1rem 0 1.3rem;
-
 			li {
-				line-height: 1.5;
+				line-height: $lh;
 				padding-bottom: ($baseline / 2);
-
 				&:last-child {
 					padding-bottom: 0;
 				}
 			}
 		}
-
 		.intro {
 			font-family: $font_face-accent !important;
 			font-size: $font_size-med;
-			font-weight: 200;
-			line-height: 1.5;
-
+			line-height: $lh;
 			p {
 				font-family: inherit;
 				font-size: inherit;
@@ -45,7 +37,6 @@ article.post-single {
 				line-height: inherit;
 			}
 		}
-
 		h1,
 		h2,
 		h3,
@@ -53,9 +44,8 @@ article.post-single {
 		h5,
 		h6 {
 			line-height: 125%;
-			margin: ($baseline * 2) 0 $baseline 0;
+			margin: 2em 0 0.5em 0;
 		}
-
 		.aligncenter,
 		.alignleft,
 		.alignnone,
@@ -65,26 +55,22 @@ article.post-single {
 			margin-bottom: $baseline;
 			vertical-align: text-top;
 		}
-
 		.alignleft {
 			float: left;
 			margin-left: 0;
 			margin-right: $baseline;
 		}
-
 		.alignright {
 			float: right;
 			margin-left: $baseline;
 			margin-right: 0;
 		}
-
 		.aligncenter,
 		.alignnone {
 			float: none;
 			margin-left: auto;
 			margin-right: auto;
 		}
-
 		.wp-caption,
 		figure,
 		img {
@@ -93,7 +79,6 @@ article.post-single {
 			height: auto !important;
 			margin: 0 auto !important;
 		}
-
 		.wp-caption-text,
 		figcaption {
 			display: block;
@@ -104,7 +89,6 @@ article.post-single {
 			text-align: center;
 			background-color: darken(rgba($clr_bg-accent, $opacity-solid), 5%);
 			position: relative;
-
 			&:before {
 				content: "";
 				width: 0;
@@ -118,7 +102,6 @@ article.post-single {
 				z-index: 5000;
 			}
 		}
-
 		blockquote {
 			display: block;
 			width: 100%;
@@ -130,22 +113,18 @@ article.post-single {
 			color: lighten($font_clr-main, 10%);
 			font-size: $font_size-std;
 			font-family: $font_face-accent;
-
 			p {
 				font-size: inherit;
 				margin: 0;
 			}
-
 			cite {
 				display: block;
 				margin-top: 1rem;
 				font-size: $font_size-sml;
 				font-style: normal;
-
 				a {
 					font-size: inherit;
 				}
-
 				&:before {
 					content: "~ ";
 					display: inline-block;
@@ -154,14 +133,12 @@ article.post-single {
 			}
 		}
 	}
-
 	.post__footer {
 		@extend .item-8;
 		display: block;
 		line-height: $lh;
 		margin: 2rem auto;
 	}
-
 	.post__author--bio {
 		@extend .item-8;
 		@extend .central-column;

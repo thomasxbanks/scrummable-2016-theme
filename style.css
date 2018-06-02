@@ -525,7 +525,7 @@ button:focus, select:focus, input:focus, textarea:focus {
   margin-top: 2rem; }
 
 [class*="content"] {
-  font-family: "Overpass", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1rem;
   color: #292c32;
   letter-spacing: normal;
@@ -684,7 +684,7 @@ form {
     padding: 0 1rem;
     margin: 0;
     border: 2px solid black;
-    font-family: "Overpass", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 1rem;
     font-weight: normal;
     color: white;
@@ -809,7 +809,7 @@ header#masthead {
   width: 100%;
   padding: 1rem; }
   footer#colophon #copyright small {
-    font-family: "Overpass", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 0.75rem;
     color: #494c52; }
 
@@ -846,7 +846,7 @@ aside.sidebar {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   color: white;
-  font-family: "Overpass", Arial, "Helvetica Neue", Helvetica, sans-serif; }
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
   aside.sidebar[data-state="open"] {
     transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
@@ -898,7 +898,7 @@ header.post__header {
     font-family: "Comfortaa", Arial, "Helvetica Neue", Helvetica, sans-serif;
     color: white;
     font-size: 3rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
     text-decoration: none; }
     @media (max-width: 800px) {
       .post__wrapper--image h1 {
@@ -908,7 +908,7 @@ header.post__header {
     max-width: 400px;
     margin: 1rem auto;
     color: white;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
     text-decoration: none; }
   @media screen and (max-width: 567px) {
     .post__wrapper--image h1 {
@@ -1078,7 +1078,7 @@ section.navigation {
     display: inline-block;
     width: 1rem;
     height: 1rem;
-    line-height: 1.8;
+    line-height: 1.8em;
     vertical-align: middle;
     background-size: cover;
     background-position: center center;
@@ -1107,7 +1107,7 @@ section.navigation {
   margin-bottom: 1rem; }
   .post__data ul li {
     font-size: 0.75rem !important;
-    line-height: 1.8; }
+    line-height: 1.8em; }
   .post__data cite {
     font-style: normal; }
   .post__data .author__avatar {
@@ -1185,10 +1185,11 @@ section.navigation {
     margin: 1rem 0; }
   .post-teaser .hero__title--post {
     font-size: 1.6rem;
-    line-height: 1.8;
+    line-height: 1.8em;
     padding: 2rem; }
   .post-teaser p {
     display: block;
+    line-height: 1.8em;
     padding: 0.5rem 0; }
 
 article.post-single {
@@ -1202,7 +1203,7 @@ article.post-single {
     font-size: 1rem;
     margin: 0 auto;
     padding: 2rem;
-    line-height: 1.8;
+    line-height: 1.8em;
     text-align: left; }
     article.post-single .post__content ol, article.post-single .post__author--bio ol,
     article.post-single .post__content ul,
@@ -1212,7 +1213,7 @@ article.post-single {
       article.post-single .post__content ol li, article.post-single .post__author--bio ol li,
       article.post-single .post__content ul li,
       article.post-single .post__author--bio ul li {
-        line-height: 1.5;
+        line-height: 1.8em;
         padding-bottom: 0.5rem; }
         article.post-single .post__content ol li:last-child, article.post-single .post__author--bio ol li:last-child,
         article.post-single .post__content ul li:last-child,
@@ -1221,8 +1222,7 @@ article.post-single {
     article.post-single .post__content .intro, article.post-single .post__author--bio .intro {
       font-family: "Comfortaa", Arial, "Helvetica Neue", Helvetica, sans-serif !important;
       font-size: 1.3rem;
-      font-weight: 200;
-      line-height: 1.5; }
+      line-height: 1.8em; }
       article.post-single .post__content .intro p, article.post-single .post__author--bio .intro p {
         font-family: inherit;
         font-size: inherit;
@@ -1240,7 +1240,7 @@ article.post-single {
     article.post-single .post__content h6,
     article.post-single .post__author--bio h6 {
       line-height: 125%;
-      margin: 2rem 0 1rem 0; }
+      margin: 2em 0 0.5em 0; }
     article.post-single .post__content .aligncenter, article.post-single .post__author--bio .aligncenter,
     article.post-single .post__content .alignleft,
     article.post-single .post__author--bio .alignleft,
@@ -1330,11 +1330,11 @@ article.post-single {
           margin-right: 0.5rem; }
   article.post-single .post__footer {
     display: block;
-    line-height: 1.8;
+    line-height: 1.8em;
     margin: 2rem auto; }
   article.post-single .post__author--bio {
     display: block;
-    line-height: 1.8;
+    line-height: 1.8em;
     margin: 2rem auto; }
 
 .single-post main.central-column, .single-post article.post-single main.inner, article.post-single .single-post main.inner, .single-post article.post-single main.post__author--bio, article.post-single .single-post main.post__author--bio {
@@ -1356,29 +1356,39 @@ article.page--single {
     max-width: 640px;
     margin: 0 auto;
     padding: 1rem;
-    line-height: 1.75;
+    line-height: 1.8em;
     text-align: left; }
-    article.page--single .page__content ul, article.page--single .page__content ol {
+    article.page--single .page__content ul,
+    article.page--single .page__content ol {
       padding: 1rem 2rem; }
-      article.page--single .page__content ul li, article.page--single .page__content ol li {
-        line-height: 1.5;
+      article.page--single .page__content ul li,
+      article.page--single .page__content ol li {
+        line-height: 1.8em;
         padding-bottom: 0.5rem; }
-        article.page--single .page__content ul li:last-child, article.page--single .page__content ol li:last-child {
+        article.page--single .page__content ul li:last-child,
+        article.page--single .page__content ol li:last-child {
           padding-bottom: 0; }
     article.page--single .page__content .intro {
       font-family: "Comfortaa", Arial, "Helvetica Neue", Helvetica, sans-serif !important;
       font-size: 1.3rem;
-      font-weight: 200;
-      line-height: 1.5; }
+      line-height: 1.8em; }
       article.page--single .page__content .intro p {
         font-family: inherit;
         font-size: inherit;
         font-weight: inherit;
         line-height: inherit; }
-    article.page--single .page__content h1, article.page--single .page__content h2, article.page--single .page__content h3, article.page--single .page__content h4, article.page--single .page__content h5, article.page--single .page__content h6 {
-      line-height: 125%;
+    article.page--single .page__content h1,
+    article.page--single .page__content h2,
+    article.page--single .page__content h3,
+    article.page--single .page__content h4,
+    article.page--single .page__content h5,
+    article.page--single .page__content h6 {
+      line-height: 1.8em;
       margin-bottom: 1rem; }
-    article.page--single .page__content .alignleft, article.page--single .page__content .alignright, article.page--single .page__content .aligncenter, article.page--single .page__content .alignnone {
+    article.page--single .page__content .alignleft,
+    article.page--single .page__content .alignright,
+    article.page--single .page__content .aligncenter,
+    article.page--single .page__content .alignnone {
       display: block;
       margin-top: 1rem;
       margin-bottom: 1rem;
@@ -1391,16 +1401,20 @@ article.page--single {
       float: right;
       margin-left: 1rem;
       margin-right: 0; }
-    article.page--single .page__content .aligncenter, article.page--single .page__content .alignnone {
+    article.page--single .page__content .aligncenter,
+    article.page--single .page__content .alignnone {
       float: none;
       margin-left: auto;
       margin-right: auto; }
-    article.page--single .page__content img, article.page--single .page__content figure, article.page--single .page__content .wp-caption {
+    article.page--single .page__content img,
+    article.page--single .page__content figure,
+    article.page--single .page__content .wp-caption {
       display: block;
       max-width: 100% !important;
       height: auto !important;
       margin: 0 auto; }
-    article.page--single .page__content figcaption, article.page--single .page__content .wp-caption-text {
+    article.page--single .page__content figcaption,
+    article.page--single .page__content .wp-caption-text {
       display: block;
       width: 100%;
       padding: 0.5rem;
@@ -1423,10 +1437,20 @@ article.page--single {
         margin: 0; }
       article.page--single .page__content blockquote a {
         text-decoration: none; }
-      article.page--single .page__content blockquote a span, article.page--single .page__content blockquote span, article.page--single .page__content blockquote span a, article.page--single .page__content blockquote cite, article.page--single .page__content blockquote a cite, article.page--single .page__content blockquote cite a {
+      article.page--single .page__content blockquote a span,
+      article.page--single .page__content blockquote span,
+      article.page--single .page__content blockquote span a,
+      article.page--single .page__content blockquote cite,
+      article.page--single .page__content blockquote a cite,
+      article.page--single .page__content blockquote cite a {
         display: block;
         text-align: right; }
-        article.page--single .page__content blockquote a span:before, article.page--single .page__content blockquote span:before, article.page--single .page__content blockquote span a:before, article.page--single .page__content blockquote cite:before, article.page--single .page__content blockquote a cite:before, article.page--single .page__content blockquote cite a:before {
+        article.page--single .page__content blockquote a span:before,
+        article.page--single .page__content blockquote span:before,
+        article.page--single .page__content blockquote span a:before,
+        article.page--single .page__content blockquote cite:before,
+        article.page--single .page__content blockquote a cite:before,
+        article.page--single .page__content blockquote cite a:before {
           content: "~ "; }
       article.page--single .page__content blockquote:before, article.page--single .page__content blockquote:after {
         content: "";
