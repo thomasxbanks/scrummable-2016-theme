@@ -46,6 +46,9 @@ aside.sidebar {
 				margin: 0.5rem;
 				width: calc(33.33% - 1rem);
 			}
+			@media (min-width: $max-width) {
+				width: calc(25% - 1rem);
+			}
 			a {
 				display: block;
 				width: 100%;

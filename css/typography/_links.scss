@@ -1,23 +1,28 @@
 // Text Links
+%text-link {
+	font-family: inherit;
+	text-decoration: none;
+	box-shadow: inset 0 -1px 0 $clr_brand;
+	padding-bottom: 1px;
+	transition: box-shadow $ease-main $speed-fast;
+	color: $clr_grey-dark;
+	cursor: pointer !important;
+	&:hover {
+		box-shadow: inset 0 -2px 0 $clr_brand, 0 1px 0 $clr_brand;
+	}
+	&:visited {
+		color: lighten($clr_grey-dark, 5%);
+	}
+}
 
 .post {
 	a,
 	a:active,
 	a:link {
-		font-family: inherit;
-		text-decoration: none;
-		box-shadow: inset 0 -1px 0 $clr_brand;
-		padding-bottom: 1px;
-		transition: box-shadow $ease-main $speed-fast;
-		color: $clr_grey-dark;
-		cursor: pointer !important;
-
-		&:hover {
-			box-shadow: inset 0 -2px 0 $clr_brand, 0 1px 0 $clr_brand;
-		}
-
-		&:visited {
-			color: lighten($clr_grey-dark, 5%);
-		}
+		@extend %text-link;
 	}
+}
+
+#copyright a {
+	@extend %text-link;
 }

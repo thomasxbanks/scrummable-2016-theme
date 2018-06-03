@@ -5,12 +5,27 @@ footer#colophon {
 	padding: $baseline;
 	#copyright small {
 		font-family: $font_face-main;
-		font-size: $font_size-xsm;
+		font-size: 0;
 		color: $clr_grey-mid;
+		span {
+			display: block;
+			font-size: $font_size-xsm;
+			line-height: $lh;
+		}
+		@media (min-width: 768px) {
+			font-size: $font_size-xsm;
+			span {
+				display: inline;
+			}
+		}
 	}
 }
 
 button#return_to_top {
+	@media screen and (max-width: 767px) {
+		width: calc(100% - 2rem);
+		margin: 1rem;
+	}
 	@media screen and (min-width: 768px) {
 		position: fixed;
 		right: 0;
