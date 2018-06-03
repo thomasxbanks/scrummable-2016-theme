@@ -29,5 +29,5 @@ if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip')) {
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa:300" rel="stylesheet">
   <?php get_template_part('partials-page/page', 'meta'); ?>
 </head>
-<body <?php body_class(); ?>">
+<body <?php body_class(); ?>>
 <?php get_template_part('partials-page/page', 'masthead'); ?>
