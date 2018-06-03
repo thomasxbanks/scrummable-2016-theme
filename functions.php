@@ -126,3 +126,7 @@ function my_deregister_scripts()
     wp_deregister_script( 'wp-embed' );
 }
 add_action( 'wp_footer', 'my_deregister_scripts' );
+
+// SCR-8: Obfuscate WordPress Version for security
+remove_action('wp_head', 'wp_generator');
+function remove_wordpress_version_from_rss() { return ''; } add_filter('the_generator', 'remove_wordpress_version_from_rss');
