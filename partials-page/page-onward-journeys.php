@@ -23,17 +23,26 @@
             'orderby' => 'id'
         );
         $cat_query = new WP_Query($args); ?>
-        <?php if ($cat_query->have_posts()) : $count = 0; ?>
-            <section id="onward_journeys" class="grid_container grid_row grid_wrap content-center central-column" data-role="more articles" aria-label="More articles">
-            <?php while ($cat_query->have_posts()) : $cat_query->the_post(); ?>
-                <?php $count++; custom_post('teaser'); ?>
-            <?php endwhile; ?>
-            <?php wp_reset_postdata(); ?>
-        <?php else : ?>
-            <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+        <?php if ($cat_query->have_posts()) : global $count; ?>
+            <section 
+                id="onward_journeys" 
+                class="grid_container grid_row grid_wrap content-center central-column" 
+                data-role="more articles" 
+                aria-label="More articles"
+            >
+                <?php while ($cat_query->have_posts()) : $cat_query->the_post(); ?>
+                    <?php 
+                        custom_post('teaser');
+                        $count++; 
+                    ?>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+            <?php else : ?>
+                <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+            <?php endif; ?>
+            </section>
         <?php endif; ?>
-        </section>
-    <?php endif; ?>
+
     <?php if ($wp_query->max_num_pages > 1) : ?>
         <?php if (7 !== 7) { //!is_mobile() ?>
             <div class="button__wrapper">
