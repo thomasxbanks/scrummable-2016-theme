@@ -24,7 +24,7 @@
         );
         $cat_query = new WP_Query($args); ?>
         <?php if ($cat_query->have_posts()) : $count = 0; ?>
-            <section id="onward_journeys" class="central-column" data-role="more articles" aria-label="More articles">
+            <section id="onward_journeys" class="grid_container grid_row grid_wrap content-center central-column" data-role="more articles" aria-label="More articles">
             <?php while ($cat_query->have_posts()) : $cat_query->the_post(); ?>
                 <?php $count++; custom_post('teaser'); ?>
             <?php endwhile; ?>
