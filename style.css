@@ -543,13 +543,12 @@ button:focus, select:focus, input:focus, textarea:focus {
     display: block;
     padding: 0;
     margin: 0;
-    font-family: "Comfortaa", Arial, "Helvetica Neue", Helvetica, sans-serif; }
+    font-family: "Comfortaa", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: normal; }
   [class*="content"] h1 {
-    font-size: 2rem;
-    font-weight: 600; }
+    font-size: 2rem; }
   [class*="content"] h2 {
     font-size: 1.6rem;
-    font-weight: 600;
     color: black; }
   [class*="content"] h3 {
     font-size: 1.3rem;
@@ -557,9 +556,7 @@ button:focus, select:focus, input:focus, textarea:focus {
   [class*="content"] h4,
   [class*="content"] h5,
   [class*="content"] h6 {
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase; }
+    font-size: 1rem; }
   .post-single [class*="content"] p {
     display: block;
     margin: 1rem 0 1.3rem 0;

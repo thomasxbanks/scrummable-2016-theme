@@ -9,19 +9,16 @@
 	font-weight: 400;
 	text-align: left;
 	-webkit-font-smoothing: antialiased;
-
 	b,
 	strong {
 		font-family: inherit;
 		font-weight: 600;
 	}
-
 	em,
 	i {
 		font-family: inherit;
 		font-style: italic;
-	}
-	// Headers
+	} // Headers
 	h1,
 	h2,
 	h3,
@@ -32,32 +29,24 @@
 		padding: 0;
 		margin: 0;
 		font-family: $font_face-accent;
+		font-weight: normal;
 	}
-
 	h1 {
 		font-size: $font_size-xlg;
-		font-weight: 600;
 	}
-
 	h2 {
 		font-size: $font_size-lrg;
-		font-weight: 600;
 		color: $clr_black;
 	}
-
 	h3 {
 		font-size: $font_size-med;
 		color: $clr_black;
 	}
-
 	h4,
 	h5,
 	h6 {
 		font-size: $font_size-std;
-		font-weight: bold;
-		text-transform: uppercase;
 	}
-
 	.post-single & {
 		p {
 			display: block;
@@ -66,14 +55,12 @@
 			font-size: 1rem;
 		}
 	}
-
 	hr {
 		color: $clr_black;
 		height: 1px;
 		opacity: 0.2;
 		margin: ($baseline / 2) 0 (($baseline / 2) - 1) 0;
-	}
-	// HTML Styling
+	} // HTML Styling
 	.pre,
 	pre {
 		display: block;
