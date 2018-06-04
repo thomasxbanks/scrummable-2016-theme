@@ -34,6 +34,8 @@ header.post__header {
 		font-family: $font_face-accent;
 		color: $clr_bg-main;
 		font-size: 3rem;
+		line-height: $lh;
+		font-weight: normal;
 		text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
 		text-decoration: none;
 	}

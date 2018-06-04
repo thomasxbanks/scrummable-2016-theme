@@ -897,6 +897,8 @@ header.post__header {
     font-family: "Comfortaa", Arial, "Helvetica Neue", Helvetica, sans-serif;
     color: white;
     font-size: 3rem;
+    line-height: 1.8em;
+    font-weight: normal;
     text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
     text-decoration: none; }
     @media (max-width: 800px) {
