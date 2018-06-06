@@ -56,15 +56,15 @@
 		height: 1px;
 		opacity: 0.2;
 		margin: ($baseline / 2) 0 (($baseline / 2) - 1) 0;
-	} // HTML Styling
+	}
+	/* HTML Styling */
 	.pre,
 	pre {
 		display: block;
+		@extend %padding-standard;
 		background-color: darken($clr_bg-main, 2%);
-		border: 1px solid darken($clr_bg-main, 5%);
-		font-family: "Courier New", Courier, monospace;
-		font-size: ($baseline - 2);
-		padding: $baseline;
-		margin: $baseline 0;
+		@extend %card;
+		font-family: "Operator Mono", "Dank Mono", "Fira Code", "Roboto Mono", "Inconsolata", "Ubuntu Mono", Courier, monospace;
+		font-size: 1rem;
 	}
 }

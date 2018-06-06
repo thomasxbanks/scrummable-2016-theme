@@ -1251,8 +1251,7 @@ article.post-single {
     article.post-single .post__author--bio .alignright {
       display: block;
       margin-top: 1rem;
-      margin-bottom: 1rem;
-      vertical-align: text-top; }
+      margin-bottom: 1rem; }
     
     article.post-single .post__content .alignleft,
     article.post-single .post__author--bio .alignleft {
