@@ -17,14 +17,14 @@ if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip')) {
 	<!-- Favicons, app icons, and manifest -->
 	
 
-<link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
-<link rel="manifest" href="/img/favicons/site.webmanifest">
-<link rel="mask-icon" href="/img/favicons/safari-pinned-tab.svg" color="#a1213d">
-<link rel="shortcut icon" href="/img/favicons/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="<?php bloginfo('template_directory'); ?>/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('template_directory'); ?>/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('template_directory'); ?>/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="<?php bloginfo('template_directory'); ?>/img/favicons/site.webmanifest">
+<link rel="mask-icon" href="<?php bloginfo('template_directory'); ?>/img/favicons/safari-pinned-tab.svg" color="#a1213d">
+<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/img/favicons/favicon.ico">
 <meta name="msapplication-TileColor" content="#a1213d">
-<meta name="msapplication-config" content="/img/favicons/browserconfig.xml">
+<meta name="msapplication-config" content="<?php bloginfo('template_directory'); ?>/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#a1213d">
 
 
